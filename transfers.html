@@ -1,4 +1,5 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Transfers | The Long Exhale</title><style>
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Transfers | The Long Exhale</title><style>
 :root{--bg:#f3f0e9;--card:#fffdf9;--ink:#25231f;--muted:#6e6962;--line:#ddd6cc;--al:#87967d;--blue:#6f879d;--gold:#b08a58;--teal:#6f9290}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}.app{max-width:680px;margin:auto;padding-bottom:42px}
 header{padding:22px 18px 18px;background:#e8ece8;border-bottom:1px solid var(--line)}.eyebrow{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}h1{font-size:1.85rem;margin:.25rem 0}.sub,.muted,.tiny{color:var(--muted)}
@@ -12,33 +13,52 @@ summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary
 .checklist{display:grid;gap:5px}.checklist div{background:#f3eee6;border-radius:10px;padding:8px 10px}.page-footer{text-align:center;color:var(--muted);padding:25px 10px 45px;font-size:.85rem}
 .transfer{border-left:5px solid var(--blue)}.warning{border-left:5px solid #c17964;background:#fbefeb}
 @media(max-width:520px){.quick-grid{grid-template-columns:1fr 1fr}.hero-copy{max-width:86%}.weather-row{grid-template-columns:1fr 1fr}}
-</style></head>
-<body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Transfers & Tickets</h1><div class="sub">Prescriptive routes · First class where practical · Comfort over speed</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a class="active" href="transfers.html">Transfers</a></nav><main>
-<section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">TRAVEL PLAYBOOK</div><h2>Know exactly what to buy</h2><p>Each transfer identifies the route, purchase source, class, connection target and arrival plan.</p></div>
-<svg class="lake-art" viewBox="0 0 680 160"><path fill="#dce5df" d="M0 125L110 77l70 40 95-95 94 91 72-55 90 68 76-34 73 34v34H0z"/><path stroke="#fff" stroke-width="7" fill="none" d="M20 138h135q35 0 55-25l38-42q20-25 55 0l54 42q20 18 48 18h245"/><circle cx="90" cy="138" r="9" fill="#b08a58"/><circle cx="330" cy="94" r="9" fill="#b08a58"/><circle cx="580" cy="132" r="9" fill="#b08a58"/></svg></section>
 
+/* Final site-wide width consistency */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{padding:0!important}
+.app{
+  width:100%!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+}
+header,.site-nav,main,.city,.day,.card,details,.hero-visual,.visual-card{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+img,svg{max-width:100%!important;height:auto}
+.item,.restaurant,.route,.inside,.link-row{min-width:0!important;max-width:100%!important}
+a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
+@media(min-width:700px){
+  body{padding:18px!important}
+  .app{border:1px solid var(--line);border-radius:28px}
+}
+</style></head>
+<body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Transfers &amp; Tickets</h1><div class="sub">Prescriptive routes · First class where practical · Comfort over speed</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a class="active" href="transfers.html">Transfers</a></nav><main>
+<section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">TRAVEL PLAYBOOK</div><h2>Know exactly what to buy</h2><p>Each transfer identifies the route, purchase source, class, connection target and arrival plan.</p></div>
+<svg class="lake-art" viewbox="0 0 680 160"><path d="M0 125L110 77l70 40 95-95 94 91 72-55 90 68 76-34 73 34v34H0z" fill="#dce5df"></path><path d="M20 138h135q35 0 55-25l38-42q20-25 55 0l54 42q20 18 48 18h245" fill="none" stroke="#fff" stroke-width="7"></path><circle cx="90" cy="138" fill="#b08a58" r="9"></circle><circle cx="330" cy="94" fill="#b08a58" r="9"></circle><circle cx="580" cy="132" fill="#b08a58" r="9"></circle></svg></section>
 <div class="card decision"><h3>Our booking strategy</h3>
 <div class="checklist"><div>🥇 Select First Class wherever the itinerary offers it.</div><div>🔄 Prefer 8–15 minute connections; 10–12 minutes is the comfort sweet spot.</div><div>⚠️ Avoid connections under 5 minutes unless clearly cross-platform and unavoidable.</div><div>🚶 Pay a little more or arrive a little later rather than rush through an unfamiliar station.</div><div>📱 Install SBB Mobile and add both travelers before Switzerland.</div></div>
-<a class="mini-btn" href="https://www.sbb.ch/en/travel-information/apps/sbb-mobile.html" target="_blank" rel="noopener">SBB Mobile information</a>
+<a class="mini-btn" href="https://www.sbb.ch/en/travel-information/apps/sbb-mobile.html" rel="noopener" target="_blank">SBB Mobile information</a>
 </div>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Monday, September 7</div><h2>Paris → Strasbourg</h2><p>Direct TGV from Gare de l’Est. This is the easiest major transfer.</p><div class="quick-grid"><div class="fact"><b>Hotel departure</b>75–90 min before train</div><div class="fact"><b>Station buffer</b>About 30–45 min</div><div class="fact"><b>Class</b>First Class</div><div class="fact"><b>Buy</b>SNCF Connect now</div></div></div>
-<details open><summary>🚕 Hotel to Gare de l’Est</summary><div class="inside"><div class="item">Use a taxi/Uber from Hôtel Adèle & Jules. Let the live traffic estimate determine the exact departure, but keep a generous buffer.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Adele+Jules+Paris+to+Gare+de+l+Est" target="_blank" rel="noopener">Exact route</a></div></details>
+<details open=""><summary>🚕 Hotel to Gare de l’Est</summary><div class="inside"><div class="item">Use a taxi/Uber from Hôtel Adèle &amp; Jules. Let the live traffic estimate determine the exact departure, but keep a generous buffer.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Adele+Jules+Paris+to+Gare+de+l+Est" rel="noopener" target="_blank">Exact route</a></div></details>
 <details><summary>🚄 Ticket instructions</summary><div class="inside">
 <div class="item"><b>Search:</b> Paris Gare de l’Est → Strasbourg.</div>
 <div class="item"><b>Select:</b> A direct TGV INOUI in First Class. Avoid routings with a transfer.</div>
 <div class="item"><b>Seat:</b> Reservation is included. Choose two seats together; a duo/table arrangement is preferable.</div>
 <div class="item"><b>Buy:</b> SNCF Connect. Since departure is within weeks, buy now if not already booked.</div>
-<a class="mini-btn" href="https://www.sncf-connect.com/en-en/" target="_blank" rel="noopener">SNCF Connect</a>
+<a class="mini-btn" href="https://www.sncf-connect.com/en-en/" rel="noopener" target="_blank">SNCF Connect</a>
 </div></details>
 <details><summary>Arrival</summary><div class="inside"><div class="item">Use the official taxi rank at Strasbourg station for Hôtel Régent Petite France. Tram is possible, but the taxi is the no-friction luggage choice.</div></div></details>
 </section>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Sunday, September 13</div><h2>Strasbourg → Wengen</h2><p>The preferred route crosses at Basel and continues through Interlaken and Lauterbrunnen.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 7:30–8:15 AM</div><div class="fact"><b>Train target</b>Around 8:15–9:00 AM</div><div class="fact"><b>Arrival Wengen</b>Early-to-mid afternoon</div><div class="fact"><b>Class</b>First where offered</div></div></div>
 <div class="card warning"><h3>Final timetable rule</h3><p>Search the exact date in SBB Mobile now. Select the best route that keeps the connection pattern below and gives roughly 8–15 minutes at major changes.</p></div>
-<details open><summary>🚆 Preferred route</summary><div class="inside">
+<details open=""><summary>🚆 Preferred route</summary><div class="inside">
 <div class="route-diagram"><span>Strasbourg</span><i>→</i><span>Basel SBB</span><i>→</i><span>Interlaken Ost</span><i>→</i><span>Lauterbrunnen</span><i>→</i><span>Wengen</span></div>
 <div class="item"><b>Leg 1:</b> Strasbourg → Basel SBB. Direct regional or high-speed service according to the selected itinerary.</div>
 <div class="item"><b>Leg 2:</b> Basel SBB → Interlaken Ost. Prefer a direct Swiss long-distance train in First Class.</div>
@@ -50,15 +70,14 @@ summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary
 <div class="item"><b>Passengers:</b> Add both travelers before purchase and select First Class.</div>
 <div class="item"><b>Reservations:</b> If the app offers a seat reservation on Basel → Interlaken, add it. Regional/mountain legs do not require reservations.</div>
 <div class="item"><b>When:</b> Buy now. International and advance fares can rise; there is no benefit to waiting this close to departure.</div>
-<a class="mini-btn" href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB timetable and tickets</a>
-<a class="mini-btn" href="https://www.sbb.ch/en/help-and-contact/products-services/reservations/seat-reservations/switzerland-and-europe.html" target="_blank" rel="noopener">SBB seat reservation help</a>
+<a class="mini-btn" href="https://www.sbb.ch/en" rel="noopener" target="_blank">SBB timetable and tickets</a>
+<a class="mini-btn" href="https://www.sbb.ch/en/help-and-contact/products-services/reservations/seat-reservations/switzerland-and-europe.html" rel="noopener" target="_blank">SBB seat reservation help</a>
 </div></details>
-<details><summary>🚕 Hotel/station logistics</summary><div class="inside"><div class="item"><b>Strasbourg:</b> Taxi from Régent Petite France to Strasbourg station.</div><div class="item"><b>Wengen:</b> Ask Hotel Bellevue in advance about luggage help from Wengen station; otherwise allow an unhurried walk.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Regent+Petite+France+to+Strasbourg+Gare" target="_blank" rel="noopener">Strasbourg hotel → station</a></div></details>
+<details><summary>🚕 Hotel/station logistics</summary><div class="inside"><div class="item"><b>Strasbourg:</b> Taxi from Régent Petite France to Strasbourg station.</div><div class="item"><b>Wengen:</b> Ask Hotel Bellevue in advance about luggage help from Wengen station; otherwise allow an unhurried walk.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Regent+Petite+France+to+Strasbourg+Gare" rel="noopener" target="_blank">Strasbourg hotel → station</a></div></details>
 </section>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Saturday, September 19</div><h2>Wengen → Montreux</h2><p>Scenic transfer via Interlaken and the GoldenPass Express.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 8:00–9:00 AM</div><div class="fact"><b>GoldenPass</b>Reserve specific train</div><div class="fact"><b>Arrival Montreux</b>Mid-to-late afternoon</div><div class="fact"><b>Class</b>First Class</div></div></div>
-<details open><summary>🚆 Preferred route</summary><div class="inside">
+<details open=""><summary>🚆 Preferred route</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→</i><span>Lauterbrunnen</span><i>→</i><span>Interlaken Ost</span><i>→ GoldenPass</i><span>Montreux</span></div>
 <div class="item"><b>Leg 1:</b> Wengen → Lauterbrunnen.</div>
 <div class="item"><b>Leg 2:</b> Lauterbrunnen → Interlaken Ost.</div>
@@ -69,27 +88,25 @@ summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary
 <div class="item"><b>Transport ticket:</b> Buy the complete Wengen → Montreux journey in SBB Mobile, First Class.</div>
 <div class="item"><b>GoldenPass seat:</b> Reserve seats separately through the official GoldenPass Express site. Select First Class and seats together. Prestige is unnecessary unless you deliberately want the premium upgrade.</div>
 <div class="item"><b>When:</b> Reserve the GoldenPass now; buy the transport ticket now or as part of your Swiss rail solution.</div>
-<a class="mini-btn" href="https://www.gpx.swiss/en/" target="_blank" rel="noopener">GoldenPass Express official</a>
-<a class="mini-btn" href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB tickets</a>
+<a class="mini-btn" href="https://www.gpx.swiss/en/" rel="noopener" target="_blank">GoldenPass Express official</a>
+<a class="mini-btn" href="https://www.sbb.ch/en" rel="noopener" target="_blank">SBB tickets</a>
 </div></details>
 <details><summary>🧳 Arrival</summary><div class="inside"><div class="item">The Grand Hotel Suisse Majestic is directly opposite Montreux station. Walk across with luggage; no taxi is needed.</div></div></details>
 </section>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Monday, September 21</div><h2>Montreux → Zürich Flughafen</h2><p>A straightforward cross-country rail day ending inside the airport complex.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00–10:30 AM</div><div class="fact"><b>Connection</b>8–15 min ideal</div><div class="fact"><b>Arrival</b>Early-to-mid afternoon</div><div class="fact"><b>Class</b>First Class</div></div></div>
-<details open><summary>🚆 Route selection</summary><div class="inside">
+<details open=""><summary>🚆 Route selection</summary><div class="inside">
 <div class="item"><b>Search:</b> Montreux → Zürich Flughafen, not Zürich HB.</div>
 <div class="item"><b>Preferred routing:</b> Select the fastest practical First Class itinerary with one well-spaced change, commonly at Lausanne or Bern depending on the timetable.</div>
 <div class="item"><b>Connection:</b> Aim for 8–15 minutes. Skip under-5-minute options. A 15–20 minute connection is fine if it removes stress.</div>
 <div class="item"><b>When:</b> Buy through SBB Mobile once the specific connection is chosen. A Saver Day Pass in First Class may be worth comparing against point-to-point fares.</div>
-<a class="mini-btn" href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB tickets</a>
-<a class="mini-btn" href="https://www.sbb.ch/en/offers/saver-day-pass" target="_blank" rel="noopener">Saver Day Pass</a>
+<a class="mini-btn" href="https://www.sbb.ch/en" rel="noopener" target="_blank">SBB tickets</a>
+<a class="mini-btn" href="https://www.sbb.ch/en/offers/saver-day-pass" rel="noopener" target="_blank">Saver Day Pass</a>
 </div></details>
 <details><summary>Hotel logistics</summary><div class="inside"><div class="item"><b>Departure:</b> Suisse Majestic is opposite Montreux station.</div><div class="item"><b>Arrival:</b> At Zürich Flughafen, follow signs for The Circle and Hyatt Regency. No taxi.</div></div></details>
 </section>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Tuesday, September 22</div><h2>Hyatt Regency → Flight</h2><p>Indoor airport transfer for the 1:10 PM flight.</p><div class="quick-grid"><div class="fact"><b>Leave room</b>9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk</div><div class="fact"><b>Tickets</b>Airline app</div></div></div>
-<details open><summary>✈️ Final steps</summary><div class="inside"><div class="item">Confirm terminal/check-in the night before. Follow signs from The Circle to the airport. Use the front desk for the fastest indoor route.</div></div></details>
+<details open=""><summary>✈️ Final steps</summary><div class="inside"><div class="item">Confirm terminal/check-in the night before. Follow signs from The Circle to the airport. Use the front desk for the fastest indoor route.</div></div></details>
 </section>
 </main><div class="page-footer">The Long Exhale · Europe 2026 · Final Version 4.1</div></div></body></html>

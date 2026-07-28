@@ -1,4 +1,5 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zurich Airport | The Long Exhale</title><style>
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Zurich Airport | The Long Exhale</title><style>
 :root{--bg:#f3f0e9;--card:#fffdf9;--ink:#25231f;--muted:#6e6962;--line:#ddd6cc;--al:#87967d;--blue:#6f879d;--gold:#b08a58;--teal:#6f9290}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}.app{max-width:680px;margin:auto;padding-bottom:42px}
 header{padding:22px 18px 18px;background:#e8ece8;border-bottom:1px solid var(--line)}.eyebrow{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}h1{font-size:1.85rem;margin:.25rem 0}.sub,.muted,.tiny{color:var(--muted)}
@@ -12,36 +13,54 @@ summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary
 .checklist{display:grid;gap:5px}.checklist div{background:#f3eee6;border-radius:10px;padding:8px 10px}.page-footer{text-align:center;color:var(--muted);padding:25px 10px 45px;font-size:.85rem}
 .transfer{border-left:5px solid var(--blue)}.warning{border-left:5px solid #c17964;background:#fbefeb}
 @media(max-width:520px){.quick-grid{grid-template-columns:1fr 1fr}.hero-copy{max-width:86%}.weather-row{grid-template-columns:1fr 1fr}}
+
+/* Final site-wide width consistency */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{padding:0!important}
+.app{
+  width:100%!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+}
+header,.site-nav,main,.city,.day,.card,details,.hero-visual,.visual-card{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+img,svg{max-width:100%!important;height:auto}
+.item,.restaurant,.route,.inside,.link-row{min-width:0!important;max-width:100%!important}
+a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
+@media(min-width:700px){
+  body{padding:18px!important}
+  .app{border:1px solid var(--line);border-radius:28px}
+}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Zurich Airport</h1><div class="sub">September 21–22 · Hyatt Regency The Circle</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a class="active" href="zurich.html">Zurich</a><a href="transfers.html">Transfers</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">FINAL NIGHT</div><h2>Ease over one more city</h2><p>The Circle keeps the final evening calm and puts you steps from the airport.</p></div>
-<svg class="lake-art" viewBox="0 0 680 160"><path fill="#cbd6d9" d="M0 150V88l120-35 80 30 95-52 80 45 90-26 105 45 110-32v87z"/><rect x="80" y="80" width="35" height="70" fill="#70828c"/><rect x="145" y="94" width="55" height="56" fill="#84969d"/><rect x="248" y="74" width="45" height="76" fill="#687c86"/><rect x="340" y="102" width="60" height="48" fill="#8ca0a6"/><rect x="455" y="84" width="48" height="66" fill="#6f858e"/></svg></section>
-
+<svg class="lake-art" viewbox="0 0 680 160"><path d="M0 150V88l120-35 80 30 95-52 80 45 90-26 105 45 110-32v87z" fill="#cbd6d9"></path><rect fill="#70828c" height="70" width="35" x="80" y="80"></rect><rect fill="#84969d" height="56" width="55" x="145" y="94"></rect><rect fill="#687c86" height="76" width="45" x="248" y="74"></rect><rect fill="#8ca0a6" height="48" width="60" x="340" y="102"></rect><rect fill="#6f858e" height="66" width="48" x="455" y="84"></rect></svg></section>
 <div class="card"><h3>📍 The Circle Essentials</h3>
-<div class="item"><b>Hotel ↔ terminal</b><br>The hotel is connected to the airport complex. Follow signs through The Circle; no taxi is needed.</div>
-<div class="item"><b>Snack/grocery option</b><br>Use Airport Shopping or Bio Local for plane snacks and breakfast backup.<br><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+Shopping" target="_blank" rel="noopener">Airport Shopping map</a></div>
+<div class="item"><b>Hotel ↔ terminal</b><br/>The hotel is connected to the airport complex. Follow signs through The Circle; no taxi is needed.</div>
+<div class="item"><b>Snack/grocery option</b><br/>Use Airport Shopping or Bio Local for plane snacks and breakfast backup.<br/><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+Shopping" rel="noopener" target="_blank">Airport Shopping map</a></div>
 </div>
-
 <div class="card"><h3>🍽️ Final-Night Dining</h3>
-<div class="restaurant"><h4>🌱 Babel</h4><div class="tiny">Inside Hyatt Regency Zurich Airport The Circle.</div><ul><li>Lebanese mezze, falafel and vegan-friendly sharing plates.</li><li>Best sit-down option without leaving the hotel complex.</li></ul><div class="reserve">Reservation: 🟡 Reserve for dinner</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Babel+Restaurant+The+Circle+Zurich" target="_blank" rel="noopener">Exact map</a><a class="mini-btn" href="https://www.hyatt.com/hyatt-regency/en-US/zrhrr-hyatt-regency-zurich-airport-the-circle/dining" target="_blank" rel="noopener">Website</a></div>
-<div class="restaurant"><h4>🌱 Negishi Sushi Bar</h4><div class="tiny">Inside The Circle.</div><ul><li>Clearly labeled vegan sushi, inari, edamame and miso soup.</li><li>Casual backup with later service.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Negishi+Sushi+Bar+The+Circle+Zurich" target="_blank" rel="noopener">Exact map</a></div>
-<div class="restaurant"><h4>🌱 Rice Up!</h4><div class="tiny">Inside The Circle.</div><ul><li>Build-your-own rice/noodle bowls with tofu and vegan sauces.</li><li>Best quick option if you arrive before closing.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rice+Up+The+Circle+Zurich" target="_blank" rel="noopener">Exact map</a></div>
+<div class="restaurant"><h4>🌱 Babel</h4><div class="tiny">Inside Hyatt Regency Zurich Airport The Circle.</div><ul><li>Lebanese mezze, falafel and vegan-friendly sharing plates.</li><li>Best sit-down option without leaving the hotel complex.</li></ul><div class="reserve">Reservation: 🟡 Reserve for dinner</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Babel+Restaurant+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a><a class="mini-btn" href="https://www.hyatt.com/hyatt-regency/en-US/zrhrr-hyatt-regency-zurich-airport-the-circle/dining" rel="noopener" target="_blank">Website</a></div>
+<div class="restaurant"><h4>🌱 Negishi Sushi Bar</h4><div class="tiny">Inside The Circle.</div><ul><li>Clearly labeled vegan sushi, inari, edamame and miso soup.</li><li>Casual backup with later service.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Negishi+Sushi+Bar+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
+<div class="restaurant"><h4>🌱 Rice Up!</h4><div class="tiny">Inside The Circle.</div><ul><li>Build-your-own rice/noodle bowls with tofu and vegan sauces.</li><li>Best quick option if you arrive before closing.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rice+Up+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
 </div>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Final afternoon/evening</div><h2>Arrive, eat, and stop</h2><p>No Zurich city excursion. Protect the final night and the flight home.</p><div class="quick-grid"><div class="fact"><b>Arrival</b>Afternoon</div><div class="fact"><b>Walking</b>Easy indoor complex</div><div class="fact"><b>Dinner</b>The Circle</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>A calm meal and an early reset rather than squeezing in one more city.</p></div>
-<details open><summary>Simple plan</summary><div class="inside"><div class="item">Check in → confirm tomorrow’s airline terminal/check-in information → dinner → prepare travel clothes and carry-ons → sleep.</div></div></details>
+<details open=""><summary>Simple plan</summary><div class="inside"><div class="item">Check in → confirm tomorrow’s airline terminal/check-in information → dinner → prepare travel clothes and carry-ons → sleep.</div></div></details>
 </section>
-
 <section class="day">
 <div class="card dayhead"><div class="muted">Departure day</div><h2>Fly home</h2><p>A simple indoor transfer from the Hyatt to Zurich Airport.</p><div class="quick-grid"><div class="fact"><b>Flight</b>1:10 PM</div><div class="fact"><b>Leave room</b>Around 9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk through complex</div></div></div>
-<details open><summary>✈️ Departure logistics</summary><div class="inside">
+<details open=""><summary>✈️ Departure logistics</summary><div class="inside">
 <div class="item"><b>Night before:</b> Verify airline terminal, check-in desk opening, baggage rules and any schedule change in the airline app.</div>
 <div class="item"><b>Morning:</b> Finish packing, eat at the hotel or airport, and leave the room around 9:30–10:00 AM unless the airline directs otherwise.</div>
 <div class="item"><b>Route:</b> Follow airport signs through The Circle. The front desk can point you toward the correct terminal/check-in area.</div>
 <div class="item"><b>Buffer:</b> For the 1:10 PM international departure, target the airport check-in/security process roughly three hours before takeoff.</div>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+departures" target="_blank" rel="noopener">Zurich Airport map</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+departures" rel="noopener" target="_blank">Zurich Airport map</a>
 </div></details>
 </section>
 </main><div class="page-footer">The Long Exhale · Europe 2026 · Final Version 4.1</div></div></body></html>

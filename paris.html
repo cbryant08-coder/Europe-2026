@@ -43,6 +43,28 @@ body{padding:0}
   .app{border:1px solid var(--line);border-radius:28px;overflow:hidden}
 }
 .hero-visual{border-radius:0}
+
+/* Final site-wide width consistency */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{padding:0!important}
+.app{
+  width:100%!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+}
+header,.site-nav,main,.city,.day,.card,details,.hero-visual,.visual-card{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+img,svg{max-width:100%!important;height:auto}
+.item,.restaurant,.route,.inside,.link-row{min-width:0!important;max-width:100%!important}
+a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
+@media(min-width:700px){
+  body{padding:18px!important}
+  .app{border:1px solid var(--line);border-radius:28px}
+}
 </style></head><body><div class="app"><section class="hero-visual"><img alt="Decorative travel illustration" src="assets/paris.svg"/><div class="hero-overlay"><div class="eyebrow">THE LONG EXHALE · MOBILE GUIDE V4.1</div><h1>Paris</h1><p>September 2–7 · Hôtel Adèle &amp; Jules</p></div></section><nav class="site-nav"><a href="index.html">Home</a><a class="active" href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Transfers</a></nav><main><section class="city" id="paris"><div class="citytitle paris"><h2>Paris</h2><div>Sept 2–7 · Hôtel Adèle &amp; Jules</div></div><div class="card visual-card"><img alt="Illustrated Paris skyline" src="assets/paris.svg"/><div class="visual-copy"><h3>Paris approach</h3><p>Iconic places are experienced, not avoided—but each day also gives you a different return corridor, restroom anchors and room to meander.</p></div></div>
 <div class="card"><h3>Paris at a glance</h3>
 <span class="badge">Walk first</span><span class="badge">Late lunch</span><span class="badge">1–2 evening outings</span><span class="badge">Rain-friendly</span>

@@ -1,4 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f0e8"><title>Wengen | The Long Exhale</title><style>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#f4f0e8" name="theme-color"/><title>Wengen | The Long Exhale</title><style>
 :root{--bg:#f3f0e9;--card:#fffdf9;--ink:#25231f;--muted:#6e6962;--line:#ddd6cc;--al:#87967d;--blue:#6f879d;--gold:#b08a58;--teal:#6f9290}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}.app{max-width:680px;margin:auto;padding-bottom:42px}
 header{padding:22px 18px 18px;background:#e8ece8;border-bottom:1px solid var(--line)}.eyebrow{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}h1{font-size:1.85rem;margin:.25rem 0}.sub,.muted,.tiny{color:var(--muted)}
@@ -12,145 +13,157 @@ summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary
 .checklist{display:grid;gap:5px}.checklist div{background:#f3eee6;border-radius:10px;padding:8px 10px}
 .page-footer{text-align:center;color:var(--muted);padding:25px 10px 45px;font-size:.85rem}
 @media(max-width:520px){.quick-grid{grid-template-columns:1fr 1fr}.hero-copy{max-width:85%}.weather-row{grid-template-columns:1fr 1fr}}
+
+/* Final site-wide width consistency */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{padding:0!important}
+.app{
+  width:100%!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+}
+header,.site-nav,main,.city,.day,.card,details,.hero-visual,.visual-card{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+img,svg{max-width:100%!important;height:auto}
+.item,.restaurant,.route,.inside,.link-row{min-width:0!important;max-width:100%!important}
+a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
+@media(min-width:700px){
+  body{padding:18px!important}
+  .app{border:1px solid var(--line);border-radius:28px}
+}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · MOBILE GUIDE V4.1</div><h1>Wengen Base Camp</h1><div class="sub">September 13–19 · Hotel Bellevue · Six nights</div></header>
 <nav class="site-nav"><a href="index.html">Home</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a class="active" href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Transfers</a></nav>
 <main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">SWISS ALPS FIELD GUIDE</div><h2>Six nights, five carefully planned day trips</h2><p>Each day explains how to leave Wengen, what to book, where to eat, and how to get back to Hotel Bellevue.</p></div>
-<svg class="mountains" viewBox="0 0 680 160" preserveAspectRatio="none" aria-hidden="true"><path fill="#dfe7e2" d="M0 145L90 82l55 38 88-100 78 88 65-64 88 86 58-42 98 57v25H0z"/><path fill="#b9c8bf" d="M0 160L95 105l48 30 91-89 79 87 65-57 85 73 60-34 97 45H0z"/></svg></section>
-
+<svg aria-hidden="true" class="mountains" preserveaspectratio="none" viewbox="0 0 680 160"><path d="M0 145L90 82l55 38 88-100 78 88 65-64 88 86 58-42 98 57v25H0z" fill="#dfe7e2"></path><path d="M0 160L95 105l48 30 91-89 79 87 65-57 85 73 60-34 97 45H0z" fill="#b9c8bf"></path></svg></section>
 <div class="card"><h3>📍 Wengen Essentials</h3>
-<div class="item"><b>Hotel Bellevue → Wengen station</b><br>Plan on roughly 8–12 minutes on foot. Ask the hotel about luggage help on transfer days.</div>
-<div class="item"><b>Coop Supermarkt Wengen</b><br>Primary picnic and room-stock shop: bread, hummus, vegan spreads, olives, fruit, chips, chocolate, water, beer and wine.<br><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Coop+Supermarkt+Wengen" target="_blank" rel="noopener">Exact map</a></div>
-<div class="item"><b>Restroom rule</b><br>Use facilities whenever you pass a station, lift terminal, major attraction or restaurant. The guide lists reliable stops for each outing.</div>
+<div class="item"><b>Hotel Bellevue → Wengen station</b><br/>Plan on roughly 8–12 minutes on foot. Ask the hotel about luggage help on transfer days.</div>
+<div class="item"><b>Coop Supermarkt Wengen</b><br/>Primary picnic and room-stock shop: bread, hummus, vegan spreads, olives, fruit, chips, chocolate, water, beer and wine.<br/><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Coop+Supermarkt+Wengen" rel="noopener" target="_blank">Exact map</a></div>
+<div class="item"><b>Restroom rule</b><br/>Use facilities whenever you pass a station, lift terminal, major attraction or restaurant. The guide lists reliable stops for each outing.</div>
 </div>
-
 <div class="card"><h3>🍽️ Wengen Food Base</h3>
 <div class="restaurant"><h4>🌱 Judy’s Restaurant — Hotel Bellevue</h4>
-    <div class="tiny">At your hotel.</div><ul><li>The most dependable vegan dinner because the hotel explicitly accommodates vegan menus with notice.</li><li>Best after a long day when going back out holds little appeal.</li></ul>
-    <div class="reserve">Reservation: 🟡 Tell the hotel in advance</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen" target="_blank" rel="noopener">Map</a><a class="mini-btn" href="https://www.bellevue-wengen.ch/en/restaurant-bar/" target="_blank" rel="noopener">Website</a></div>
+<div class="tiny">At your hotel.</div><ul><li>The most dependable vegan dinner because the hotel explicitly accommodates vegan menus with notice.</li><li>Best after a long day when going back out holds little appeal.</li></ul>
+<div class="reserve">Reservation: 🟡 Tell the hotel in advance</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.bellevue-wengen.ch/en/restaurant-bar/" rel="noopener" target="_blank">Website</a></div>
 <div class="restaurant"><h4>🌱 Brasserie Belvedere</h4>
-    <div class="tiny">Inside Grand Hotel Belvedere, Galliweidli 1440E.</div><ul><li>Use only if its current menu has a satisfying vegan choice.</li><li>This replaces the obsolete Waldrand recommendation.</li></ul>
-    <div class="reserve">Reservation: 🟡 Verify menu and reserve</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Belvedere+Wengen" target="_blank" rel="noopener">Map</a><a class="mini-btn" href="https://www.beaumier.com/en/properties/grand-hotel-belvedere/food-drink/" target="_blank" rel="noopener">Website</a></div>
+<div class="tiny">Inside Grand Hotel Belvedere, Galliweidli 1440E.</div><ul><li>Use only if its current menu has a satisfying vegan choice.</li><li>This replaces the obsolete Waldrand recommendation.</li></ul>
+<div class="reserve">Reservation: 🟡 Verify menu and reserve</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Belvedere+Wengen" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.beaumier.com/en/properties/grand-hotel-belvedere/food-drink/" rel="noopener" target="_blank">Website</a></div>
 <div class="restaurant"><h4>🌱 Sonnenbad Lounge &amp; Terrace</h4>
-    <div class="tiny">Inside Grand Hotel Belvedere.</div><ul><li>Casual daytime terrace option with mountain views.</li><li>Useful for a light lunch in Wengen, not a destination meal.</li></ul>
-    <div class="reserve">Reservation: 🟢 Usually walk-in</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Belvedere+Wengen" target="_blank" rel="noopener">Map</a><a class="mini-btn" href="https://www.beaumier.com/en/properties/grand-hotel-belvedere/food-drink/" target="_blank" rel="noopener">Website</a></div>
+<div class="tiny">Inside Grand Hotel Belvedere.</div><ul><li>Casual daytime terrace option with mountain views.</li><li>Useful for a light lunch in Wengen, not a destination meal.</li></ul>
+<div class="reserve">Reservation: 🟢 Usually walk-in</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Belvedere+Wengen" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.beaumier.com/en/properties/grand-hotel-belvedere/food-drink/" rel="noopener" target="_blank">Website</a></div>
 </div>
-
 <section class="day" id="arrival">
 <div class="card dayhead"><div class="muted">Arrival day</div><h2>Settle into Wengen</h2><p>Learn the village, stock the room, and let the first Alpine evening be easy.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave station</b>After hotel arrival</div><div class="fact"><b>Walking</b>Easy village loop</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave station</b>After hotel arrival</div><div class="fact"><b>Walking</b>Easy village loop</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>Your first uninterrupted valley view, followed by drinks and snacks back at the hotel.</p></div>
-<details open><summary>🗺️ Simple arrival loop</summary><div class="inside"><div class="route-diagram"><span>Hotel Bellevue</span><i>→</i><span>Village center</span><i>→</i><span>Coop</span><i>→</i><span>Church viewpoint</span><i>→</i><span>Hotel</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen+to+Coop+Wengen+to+Wengen+Church" target="_blank" rel="noopener">Open village map</a></div></details>
+<details open=""><summary>🗺️ Simple arrival loop</summary><div class="inside"><div class="route-diagram"><span>Hotel Bellevue</span><i>→</i><span>Village center</span><i>→</i><span>Coop</span><i>→</i><span>Church viewpoint</span><i>→</i><span>Hotel</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen+to+Coop+Wengen+to+Wengen+Church" rel="noopener" target="_blank">Open village map</a></div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Preferred:</b> Judy’s at the hotel if you want dinner. Otherwise build a room picnic at Coop.</div></div></details>
 </section>
-
 <section class="day" id="jungfraujoch">
 <div class="card dayhead"><div class="muted">Excellent visibility only</div><h2>Jungfraujoch — Top of Europe</h2><p>This is the day to move when the forecast and webcams are best.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 7:30–8:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Easy, but high altitude</div><div class="fact"><b>Reserve</b>Book once forecast firms up</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 7:30–8:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Easy, but high altitude</div><div class="fact"><b>Reserve</b>Book once forecast firms up</div></div></div>
 <div class="card highlight"><h3>⭐ Why it earns a day</h3><p>The glacier, high-Alpine environment and railway journey are genuinely unique—but the price and time are justified only when visibility is excellent.</p></div>
-<details open><summary>🚆 Route and logistics</summary><div class="inside">
+<details open=""><summary>🚆 Route and logistics</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Kleine Scheidegg</span><i>→ train</i><span>Eigergletscher</span><i>→ train</i><span>Jungfraujoch</span></div>
 <div class="item"><b>Outbound:</b> Walk to Wengen station and follow the connection shown in the Jungfrau or SBB app. The route usually changes at Kleine Scheidegg and Eigergletscher.</div>
 <div class="item"><b>Return:</b> Reverse the route to Wengen. Begin descending by mid-afternoon so the day ends calmly at the hotel.</div>
 <div class="item"><b>Tickets:</b> Buy the Jungfraujoch ticket through the official Jungfrau site/app after the weather window becomes convincing. Seat reservations may be offered or required on the final mountain segment; select them if available.</div>
-<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/plan-book/timetable/" target="_blank" rel="noopener">Official timetable</a>
-<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/live/operating-info/" target="_blank" rel="noopener">Operating status</a>
-<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/jungfraujoch-top-of-europe/" target="_blank" rel="noopener">Official tickets</a>
+<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/plan-book/timetable/" rel="noopener" target="_blank">Official timetable</a>
+<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/live/operating-info/" rel="noopener" target="_blank">Operating status</a>
+<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/jungfraujoch-top-of-europe/" rel="noopener" target="_blank">Official tickets</a>
 </div></details>
-<details><summary>🌤️ Go / no-go</summary><div class="inside"><div class="weather-row"><div>☀️<br><b>Go</b><br>Clear peaks</div><div>⛅<br><b>Go</b><br>High clouds</div><div>☁️<br><b>Wait</b><br>Summit obscured</div><div>🌧️<br><b>Skip</b><br>Poor visibility</div></div></div></details>
+<details><summary>🌤️ Go / no-go</summary><div class="inside"><div class="weather-row"><div>☀️<br/><b>Go</b><br/>Clear peaks</div><div>⛅<br/><b>Go</b><br/>High clouds</div><div>☁️<br/><b>Wait</b><br/>Summit obscured</div><div>🌧️<br/><b>Skip</b><br/>Poor visibility</div></div></div></details>
 <details><summary>🍽️ Food and comfort</summary><div class="inside"><div class="item"><b>Preferred:</b> Pack breakfast snacks and a simple picnic from Coop the evening before. Summit food is backup, not the reason to go.</div><div class="item"><b>Restrooms:</b> Wengen station, Kleine Scheidegg, Eigergletscher and Jungfraujoch complex.</div></div></details>
 </section>
-
 <section class="day" id="panorama">
 <div class="card dayhead"><div class="muted">Clear or partly cloudy</div><h2>Panorama Trail — Männlichen to Kleine Scheidegg</h2><p>The highest scenery-to-effort ratio of the stay.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 3:30–5:30 PM</div><div class="fact"><b>Walking</b>About 3 miles</div><div class="fact"><b>Difficulty</b>Easy, mostly downhill</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 3:30–5:30 PM</div><div class="fact"><b>Walking</b>About 3 miles</div><div class="fact"><b>Difficulty</b>Easy, mostly downhill</div></div></div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>Walk toward the Eiger, Mönch and Jungfrau for most of the route rather than hiking to a single viewpoint.</p></div>
-<details open><summary>🚠 Exactly how the day works</summary><div class="inside">
+<details open=""><summary>🚠 Exactly how the day works</summary><div class="inside">
 <div class="route-diagram"><span>Hotel</span><i>→ walk</i><span>Wengen cable car</span><i>→ lift</i><span>Männlichen</span><i>→ walk</i><span>Kleine Scheidegg</span><i>→ train</i><span>Wengen</span></div>
 <div class="item"><b>1. Get up:</b> Walk from Hotel Bellevue to the Wengen–Männlichen cable car. Buy a one-way ride to Männlichen at the station or in the official app; advance reservation is normally unnecessary.</div>
 <div class="item"><b>2. Optional Royal Walk:</b> Add the short uphill summit walk only if visibility and energy are good.</div>
 <div class="item"><b>3. Main walk:</b> Follow the well-marked Panorama Trail toward Kleine Scheidegg. Allow 1½–2½ hours because you will stop often.</div>
 <div class="item"><b>4. Lunch:</b> Eat at Kleine Scheidegg or use your picnic.</div>
 <div class="item"><b>5. Get home:</b> Take the Wengernalp Railway from Kleine Scheidegg directly back to Wengen. No reservation is normally needed.</div>
-<a class="mini-btn" href="https://www.maennlichen.ch/en/" target="_blank" rel="noopener">Männlichen official site</a>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Mannlichen+Panorama+Trail+Kleine+Scheidegg" target="_blank" rel="noopener">Route map</a>
+<a class="mini-btn" href="https://www.maennlichen.ch/en/" rel="noopener" target="_blank">Männlichen official site</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Mannlichen+Panorama+Trail+Kleine+Scheidegg" rel="noopener" target="_blank">Route map</a>
 </div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Primary:</b> Choose a Kleine Scheidegg terrace only after confirming a workable vegan plate.</div><div class="item"><b>Best fallback:</b> Picnic from Coop Wengen at a scenic stop before the busy hub.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Reliable at the Männlichen lift station, Kleine Scheidegg station and mountain restaurants.</div></div></details>
 </section>
-
 <section class="day" id="murren">
 <div class="card dayhead"><div class="muted">Good mountain visibility</div><h2>Mürren Village Day</h2><p>A car-free village on the opposite side of the valley with excellent return flexibility.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 4:00–6:00 PM</div><div class="fact"><b>Transport</b>Train + cable car + train</div><div class="fact"><b>Walking</b>Easy village wandering</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 4:00–6:00 PM</div><div class="fact"><b>Transport</b>Train + cable car + train</div><div class="fact"><b>Walking</b>Easy village wandering</div></div></div>
 <div class="card highlight"><h3>⭐ Why this is worth it</h3><p>Mürren gives you a different angle on the same mountains and a quieter village atmosphere than Wengen.</p></div>
-<details open><summary>🚆 Getting there and back</summary><div class="inside">
+<details open=""><summary>🚆 Getting there and back</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ cable car</i><span>Grütschalp</span><i>→ mountain train</i><span>Mürren</span></div>
 <div class="item"><b>Outbound:</b> Train Wengen → Lauterbrunnen. Follow signs for the Lauterbrunnen–Grütschalp cable car, then transfer directly to the mountain railway for Mürren.</div>
 <div class="item"><b>Village:</b> Mürren is car-free and compact. Walk the main lane, viewpoints and side streets; no local transport is needed.</div>
 <div class="item"><b>Return:</b> Mürren train → Grütschalp cable car → Lauterbrunnen train → Wengen. Start back by roughly 4:30–5:00 PM if you want hotel downtime before evening.</div>
 <div class="item"><b>Tickets:</b> Buy a Wengen–Mürren return ticket in SBB Mobile, the Jungfrau app, or at Wengen station. No seat reservations.</div>
-<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/plan-book/timetable/" target="_blank" rel="noopener">Official timetable</a>
-<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/muerren/" target="_blank" rel="noopener">Mürren overview</a>
+<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/plan-book/timetable/" rel="noopener" target="_blank">Official timetable</a>
+<a class="mini-btn" href="https://www.jungfrau.ch/en-gb/muerren/" rel="noopener" target="_blank">Mürren overview</a>
 </div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="restaurant"><h4>🌱 Café LIV</h4>
-    <div class="tiny">In Mürren village.</div><ul><li>Best fit for coffee, vegan cake, sandwiches or a light lunch.</li><li>Use as a casual stop rather than promising a substantial destination meal.</li></ul>
-    <div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+LIV+Murren" target="_blank" rel="noopener">Map</a></div><div class="restaurant"><h4>🌱 Hotel Regina Restaurant</h4>
-    <div class="tiny">In Hotel Regina Mürren.</div><ul><li>Possible terrace lunch if the current menu can accommodate vegan diners.</li><li>Confirm before committing.</li></ul>
-    <div class="reserve">Reservation: 🟡 Verify menu</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Regina+Murren" target="_blank" rel="noopener">Map</a><a class="mini-btn" href="https://www.regina-muerren.ch/" target="_blank" rel="noopener">Website</a></div><div class="item"><b>Preferred fallback:</b> Eat early in Wengen or bring a picnic from Coop. Mürren is a scenery day, not a culinary anchor.</div></div></details>
-<details><summary>🧺 Picnic and restrooms</summary><div class="inside"><div class="item"><b>Picnic:</b> Bring supplies from Wengen and choose a bench along the village edge or near Allmendhubel if you add the funicular.</div><div class="item"><b>Restrooms:</b> Lauterbrunnen station, Mürren station, cafés and restaurants.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Murren+Switzerland" target="_blank" rel="noopener">Mürren map</a></div></details>
+<div class="tiny">In Mürren village.</div><ul><li>Best fit for coffee, vegan cake, sandwiches or a light lunch.</li><li>Use as a casual stop rather than promising a substantial destination meal.</li></ul>
+<div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+LIV+Murren" rel="noopener" target="_blank">Map</a></div><div class="restaurant"><h4>🌱 Hotel Regina Restaurant</h4>
+<div class="tiny">In Hotel Regina Mürren.</div><ul><li>Possible terrace lunch if the current menu can accommodate vegan diners.</li><li>Confirm before committing.</li></ul>
+<div class="reserve">Reservation: 🟡 Verify menu</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Regina+Murren" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.regina-muerren.ch/" rel="noopener" target="_blank">Website</a></div><div class="item"><b>Preferred fallback:</b> Eat early in Wengen or bring a picnic from Coop. Mürren is a scenery day, not a culinary anchor.</div></div></details>
+<details><summary>🧺 Picnic and restrooms</summary><div class="inside"><div class="item"><b>Picnic:</b> Bring supplies from Wengen and choose a bench along the village edge or near Allmendhubel if you add the funicular.</div><div class="item"><b>Restrooms:</b> Lauterbrunnen station, Mürren station, cafés and restaurants.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Murren+Switzerland" rel="noopener" target="_blank">Mürren map</a></div></details>
 </section>
-
 <section class="day" id="lauterbrunnen">
 <div class="card dayhead"><div class="muted">Works in mixed weather</div><h2>Lauterbrunnen Valley</h2><p>Waterfalls, village scale and an easy valley walk.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Around 3:00–5:30 PM</div><div class="fact"><b>Transport</b>Direct train</div><div class="fact"><b>Walking</b>2–6 miles, flexible</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Around 3:00–5:30 PM</div><div class="fact"><b>Transport</b>Direct train</div><div class="fact"><b>Walking</b>2–6 miles, flexible</div></div></div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>See Staubbach Falls beside the village, then decide whether to continue along the valley floor.</p></div>
-<details open><summary>🚆 Logistics</summary><div class="inside">
+<details open=""><summary>🚆 Logistics</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ walk/bus</i><span>Valley</span><i>→ train</i><span>Wengen</span></div>
 <div class="item"><b>Outbound:</b> Direct train from Wengen to Lauterbrunnen; buy a return ticket at the station or in SBB Mobile. No reservation.</div>
 <div class="item"><b>Core route:</b> Station → Staubbach Falls → village → riverside/valley path.</div>
 <div class="item"><b>Trümmelbach option:</b> Walk roughly 35–45 minutes along the valley or take the local bus from Lauterbrunnen. Buy entrance tickets on arrival; no advance booking needed.</div>
 <div class="item"><b>Return:</b> Bus or walk back to Lauterbrunnen station, then direct train uphill to Wengen. Aim for a train by late afternoon.</div>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Lauterbrunnen+railway+station" target="_blank" rel="noopener">Lauterbrunnen station</a>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trummelbach+Falls" target="_blank" rel="noopener">Trümmelbach Falls</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Lauterbrunnen+railway+station" rel="noopener" target="_blank">Lauterbrunnen station</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trummelbach+Falls" rel="noopener" target="_blank">Trümmelbach Falls</a>
 </div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="restaurant"><h4>🌱 Airtime Café Bakery</h4>
-    <div class="tiny">Near Lauterbrunnen station.</div><ul><li>Best casual local option for vegan sandwiches, banana bread/cake and coffee.</li><li>Use if it fits naturally; otherwise picnic.</li></ul>
-    <div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Airtime+Cafe+Lauterbrunnen" target="_blank" rel="noopener">Map</a><a class="mini-btn" href="https://airtimecafe.com/" target="_blank" rel="noopener">Website</a></div><div class="restaurant"><h4>🌱 Flavours Café</h4>
-    <div class="tiny">Central Lauterbrunnen.</div><ul><li>Light food, coffee and vegan sweets.</li><li>Good comfort stop if the weather turns.</li></ul>
-    <div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Flavours+Cafe+Lauterbrunnen" target="_blank" rel="noopener">Map</a></div><div class="item"><b>Picnic:</b> Bring food from Wengen and eat beside the river or with a Staubbach view. Avoid sitting in private meadow grass.</div></div></details>
+<div class="tiny">Near Lauterbrunnen station.</div><ul><li>Best casual local option for vegan sandwiches, banana bread/cake and coffee.</li><li>Use if it fits naturally; otherwise picnic.</li></ul>
+<div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Airtime+Cafe+Lauterbrunnen" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://airtimecafe.com/" rel="noopener" target="_blank">Website</a></div><div class="restaurant"><h4>🌱 Flavours Café</h4>
+<div class="tiny">Central Lauterbrunnen.</div><ul><li>Light food, coffee and vegan sweets.</li><li>Good comfort stop if the weather turns.</li></ul>
+<div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Flavours+Cafe+Lauterbrunnen" rel="noopener" target="_blank">Map</a></div><div class="item"><b>Picnic:</b> Bring food from Wengen and eat beside the river or with a Staubbach view. Avoid sitting in private meadow grass.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Reliable at Lauterbrunnen station, Trümmelbach visitor facilities and your café/restaurant stop.</div></div></details>
 </section>
-
 <section class="day" id="brienz">
 <div class="card dayhead"><div class="muted">Dry lower-elevation day</div><h2>Lake Brienz Cruise</h2><p>A full, relaxing day built around one scenic boat journey.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 8:30–9:00 AM</div><div class="fact"><b>Boat</b>Late morning / midday</div><div class="fact"><b>Return</b>Around 5:00–6:30 PM</div><div class="fact"><b>Reserve</b>Optional; weather-led</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 8:30–9:00 AM</div><div class="fact"><b>Boat</b>Late morning / midday</div><div class="fact"><b>Return</b>Around 5:00–6:30 PM</div><div class="fact"><b>Reserve</b>Optional; weather-led</div></div></div>
 <div class="card highlight"><h3>⭐ Recommended plan</h3><p>Cruise one way from Interlaken Ost to Brienz, explore briefly, then return to Wengen by train. This avoids retracing the lake by boat.</p></div>
-<details open><summary>🚆 Wengen to the boat and back</summary><div class="inside">
+<details open=""><summary>🚆 Wengen to the boat and back</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ train</i><span>Interlaken Ost</span><i>→ boat</i><span>Brienz</span><i>→ trains</i><span>Wengen</span></div>
 <div class="item"><b>Outbound:</b> Train Wengen → Lauterbrunnen → Interlaken Ost. The Lake Brienz landing stage is beside Interlaken Ost station; follow the boat signs.</div>
 <div class="item"><b>Cruise:</b> Board a scheduled BLS boat from Interlaken Ost to Brienz. The boat calls at places such as Iseltwald and Giessbach depending on the sailing.</div>
 <div class="item"><b>Preferred ending:</b> Stay on to Brienz, walk the waterfront/old village, then take the train Brienz → Interlaken Ost → Lauterbrunnen → Wengen.</div>
 <div class="item"><b>Return timing:</b> Start the train return from Brienz by roughly 3:30–4:30 PM to reach Wengen around early evening.</div>
-<a class="mini-btn" href="https://www.bls.ch/en/freizeit-und-ferien/ausfluege/schifffahrt-brienzersee" target="_blank" rel="noopener">BLS Lake Brienz info</a>
-<a class="mini-btn" href="https://www.bls.ch/en/fahren/fahrausweise/verkauf/webshop" target="_blank" rel="noopener">BLS tickets</a>
-<a class="mini-btn" href="https://www.sbb.ch/en" target="_blank" rel="noopener">SBB timetable</a>
+<a class="mini-btn" href="https://www.bls.ch/en/freizeit-und-ferien/ausfluege/schifffahrt-brienzersee" rel="noopener" target="_blank">BLS Lake Brienz info</a>
+<a class="mini-btn" href="https://www.bls.ch/en/fahren/fahrausweise/verkauf/webshop" rel="noopener" target="_blank">BLS tickets</a>
+<a class="mini-btn" href="https://www.sbb.ch/en" rel="noopener" target="_blank">SBB timetable</a>
 </div></details>
 <details><summary>🎟️ Tickets and reservations</summary><div class="inside"><div class="item"><b>Trains:</b> Buy the complete Wengen → Interlaken Ost and Brienz → Wengen journeys in SBB Mobile before boarding. First class where offered.</div><div class="item"><b>Boat:</b> Standard scheduled cruises normally do not require a seat reservation. Buy first class if you want the quieter upper deck/saloon. Purchase through BLS, SBB or at the pier once the weather is clear.</div><div class="item"><b>When:</b> Decide 1–3 days ahead based on weather. You do not need to lock this in months ahead.</div></div></details>
 <details><summary>🍽️ Food and picnic</summary><div class="inside"><div class="item"><b>Preferred:</b> Pack a picnic from Coop Wengen the evening before or buy supplies at Interlaken Ost before boarding.</div>
 <div class="item"><b>Where to eat:</b> On the boat if permitted/comfortable, at Brienz waterfront, or at a marked public bench/park.</div>
 <div class="item"><b>Restaurant backup:</b> Choose a casual café near Brienz station only after confirming a vegan dish.</div>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Coop+Supermarkt+Interlaken+Ost" target="_blank" rel="noopener">Coop Interlaken Ost</a>
-<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Brienz+lake+promenade" target="_blank" rel="noopener">Brienz waterfront</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Coop+Supermarkt+Interlaken+Ost" rel="noopener" target="_blank">Coop Interlaken Ost</a>
+<a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Brienz+lake+promenade" rel="noopener" target="_blank">Brienz waterfront</a>
 </div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Interlaken Ost station, scheduled BLS boats, Brienz station and waterfront cafés.</div></div></details>
 </section>
-
 <section class="day" id="stargazing">
 <div class="card dayhead"><div class="muted">Choose the clearest evening</div><h2>Stargazing near Hotel Bellevue</h2><p>A quiet 20–30 minute experience, not an expedition.</p>
-    <div class="quick-grid"><div class="fact"><b>Leave</b>After hotel wind-down</div><div class="fact"><b>Walking</b>Very short</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Whenever ready</div></div></div>
-<details open><summary>🌌 Simple plan</summary><div class="inside"><div class="item">Check cloud cover after dinner. Use the hotel terrace first; if nearby lights are intrusive, walk a short distance beyond the village glow while staying on safe paved paths.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen" target="_blank" rel="noopener">Hotel map</a></div></details>
+<div class="quick-grid"><div class="fact"><b>Leave</b>After hotel wind-down</div><div class="fact"><b>Walking</b>Very short</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Whenever ready</div></div></div>
+<details open=""><summary>🌌 Simple plan</summary><div class="inside"><div class="item">Check cloud cover after dinner. Use the hotel terrace first; if nearby lights are intrusive, walk a short distance beyond the village glow while staying on safe paved paths.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen" rel="noopener" target="_blank">Hotel map</a></div></details>
 </section>
-
 <div class="card decision"><h3>Before leaving the hotel each day</h3><div class="checklist"><div>🎫 Tickets purchased or confirmed unnecessary</div><div>🌤️ Operating status and weather checked</div><div>🥪 Picnic/snacks packed when needed</div><div>🧥 Layers and rain shell</div><div>🔋 Phone and battery pack charged</div><div>🚻 Restroom before departure</div></div></div>
 </main><div class="page-footer">The Long Exhale · Europe 2026 · Final Version 4.1</div></div></body></html>
