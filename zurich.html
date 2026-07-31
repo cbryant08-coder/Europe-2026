@@ -46,6 +46,13 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .timeline{display:grid;gap:8px}.timeline .slot{border-left:4px solid var(--al,#87967d);background:#f3eee6;border-radius:0 12px 12px 0;padding:10px 12px}.timeline .slot b{display:block;font-size:.72rem;text-transform:uppercase;color:var(--muted)}
 .res-row{display:grid;grid-template-columns:1.15fr .75fr;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}.res-row:last-child{border-bottom:0}.res-row h4{margin:0 0 4px}.res-meta{text-align:right;font-size:.82rem}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.dashboard-grid .fact{min-height:78px}
 @media(max-width:520px){.res-row{grid-template-columns:1fr}.res-meta{text-align:left}.dashboard-grid{grid-template-columns:1fr 1fr}}
+
+/* Version 5.1 city-day navigation */
+.city-day-nav{position:sticky;top:58px;z-index:24;background:rgba(243,240,233,.97);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;margin:0 0 14px;padding:9px 10px;box-shadow:0 5px 16px rgba(35,30,25,.08)}
+.city-day-nav .nav-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800;margin:0 0 6px 3px}
+.city-day-nav .jump-nav{padding:0}.city-day-nav .jump-nav a.current{background:var(--ink);color:#fff}
+.section-nav{display:flex;gap:8px;margin:12px 0 0}.section-nav a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 7px;font-weight:750;font-size:.78rem}.section-nav a.top-link{flex:.72}
+@media(max-width:520px){.city-day-nav{top:57px;border-radius:0;margin-left:-13px;margin-right:-13px;border-left:0;border-right:0}.section-nav{flex-wrap:wrap}.section-nav a{min-width:29%}}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Zurich Airport</h1><div class="sub">September 21–22 · Hyatt Regency The Circle</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a class="active" href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">FINAL NIGHT</div><h2>Ease over one more city</h2><p>The Circle keeps the final evening calm and puts you steps from the airport.</p></div>
@@ -59,11 +66,11 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="restaurant"><h4>🌱 Negishi Sushi Bar</h4><div class="tiny">Inside The Circle.</div><ul><li>Clearly labeled vegan sushi, inari, edamame and miso soup.</li><li>Casual backup with later service.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Negishi+Sushi+Bar+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
 <div class="restaurant"><h4>🌱 Rice Up!</h4><div class="tiny">Inside The Circle.</div><ul><li>Build-your-own rice/noodle bowls with tofu and vegan sauces.</li><li>Best quick option if you arrive before closing.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rice+Up+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
 </div>
-<section class="day" id="arrival">
+<div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 20 · Arrival</a><a href="#departure">Day 21 · Fly Home</a></div></div><section class="day" id="arrival">
 <div class="card dayhead"><div class="muted">Final afternoon/evening</div><h2>Arrive, eat, and stop</h2><p>No Zurich city excursion. Protect the final night and the flight home.</p><div class="quick-grid"><div class="fact"><b>Arrival</b>Afternoon</div><div class="fact"><b>Walking</b>Easy indoor complex</div><div class="fact"><b>Dinner</b>The Circle</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>A calm meal and an early reset rather than squeezing in one more city.</p></div>
 <details open=""><summary>Simple plan</summary><div class="inside"><div class="item">Check in → confirm tomorrow’s airline terminal/check-in information → dinner → prepare travel clothes and carry-ons → sleep.</div></div></details>
-</section>
+<div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#departure">Next →</a></div></section>
 <section class="day" id="departure">
 <div class="card dayhead"><div class="muted">Departure day</div><h2>Fly home</h2><p>A simple indoor transfer from the Hyatt to Zurich Airport.</p><div class="quick-grid"><div class="fact"><b>Flight</b>1:10 PM</div><div class="fact"><b>Leave room</b>Around 9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk through complex</div></div></div>
 <details open=""><summary>✈️ Departure logistics</summary><div class="inside">
@@ -73,5 +80,5 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="item"><b>Buffer:</b> For the 1:10 PM international departure, target the airport check-in/security process roughly three hours before takeoff.</div>
 <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+departures" rel="noopener" target="_blank">Zurich Airport map</a>
 </div></details>
-</section>
+<div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
 </main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
