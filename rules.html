@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#f3f0e9" name="theme-color"/><title>Travel Rules &amp; Departure Countdown · The Long Exhale</title><style>
+:root{--bg:#f3f0e9;--card:#fffdf9;--ink:#25231f;--muted:#6e6962;--line:#ddd6cc;--al:#87967d;--blue:#6f879d;--gold:#b08a58;--teal:#6f9290}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5}.app{max-width:680px;margin:auto;padding-bottom:42px}
+header{padding:22px 18px 18px;background:#e8ece8;border-bottom:1px solid var(--line)}.eyebrow{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}h1{font-size:1.85rem;margin:.25rem 0}.sub,.muted,.tiny{color:var(--muted)}
+.site-nav{display:flex;gap:8px;overflow-x:auto;padding:11px 10px;background:rgba(248,245,238,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}.site-nav a{white-space:nowrap;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-weight:700}.site-nav a.active{background:var(--ink);color:#fff}
+main{padding:13px}.hero{position:relative;overflow:hidden;border-radius:24px;margin-bottom:12px;background:linear-gradient(145deg,#8ca0b2,#667e70);color:#fff;padding:22px;min-height:220px}.hero h2{font-size:1.55rem;margin:0 0 6px}.hero-copy{position:relative;z-index:2;max-width:74%}.lake-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:135px;opacity:.95}
+.card,details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:10px;box-shadow:0 6px 18px rgba(35,30,25,.07)}.card{padding:15px}.day{margin:20px 0 28px}.dayhead{border-left:5px solid var(--al);background:#f0f2ed}.dayhead h2{margin:.1rem 0 .4rem}.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.fact{background:#f3eee6;border:1px solid var(--line);border-radius:12px;padding:9px}.fact b{display:block;font-size:.68rem;text-transform:uppercase;color:var(--muted)}
+summary{cursor:pointer;padding:14px 15px;font-weight:750;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right}details[open] summary:after{content:"−"}.inside{padding:0 15px 15px}.item{background:#f3eee6;border-radius:12px;padding:11px;margin:7px 0}.highlight{border-left:5px solid var(--gold);background:#faf4e8}.comfort{border-left:5px solid var(--teal);background:#edf5f4}.decision{border-left:5px solid #9676a8;background:#f6f0f8}.route-diagram{display:flex;align-items:center;gap:7px;overflow-x:auto;padding:12px 3px}.route-diagram span{white-space:nowrap;background:#f3eee6;border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-weight:700;font-size:.82rem}.route-diagram i{font-style:normal;color:var(--muted)}
+.btn,.mini-btn{display:inline-block;text-decoration:none;border-radius:11px;font-weight:700;margin:7px 5px 0 0}.btn{color:#fff;background:var(--ink);padding:11px 13px}.mini-btn{color:var(--ink);background:#fff;border:1px solid var(--line);padding:8px 10px;font-size:.82rem}.badge{display:inline-block;border:1px solid var(--line);background:#faf7f1;border-radius:999px;padding:5px 9px;font-size:.76rem;margin:2px 3px 2px 0;font-weight:700}
+.restaurant{background:#f7f3ec;border:1px solid var(--line);border-radius:13px;padding:12px;margin:8px 0}.restaurant h4{margin:0 0 5px}.restaurant ul{margin:.5rem 0 .5rem 1rem;padding:0}.reserve{font-weight:700;font-size:.82rem}
+.weather-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.weather-row div{text-align:center;border-radius:12px;padding:9px 5px;border:1px solid var(--line);background:#faf7f1;font-size:.78rem}
+.checklist{display:grid;gap:5px}.checklist div{background:#f3eee6;border-radius:10px;padding:8px 10px}.page-footer{text-align:center;color:var(--muted);padding:25px 10px 45px;font-size:.85rem}
+.transfer{border-left:5px solid var(--blue)}.warning{border-left:5px solid #c17964;background:#fbefeb}
+@media(max-width:520px){.quick-grid{grid-template-columns:1fr 1fr}.hero-copy{max-width:86%}.weather-row{grid-template-columns:1fr 1fr}}
+
+/* Final site-wide width consistency */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{padding:0!important}
+.app{
+  width:100%!important;
+  max-width:620px!important;
+  margin:0 auto!important;
+  overflow:hidden!important;
+}
+header,.site-nav,main,.city,.day,.card,details,.hero-visual,.visual-card{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+img,svg{max-width:100%!important;height:auto}
+.item,.restaurant,.route,.inside,.link-row{min-width:0!important;max-width:100%!important}
+a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
+@media(min-width:700px){
+  body{padding:18px!important}
+  .app{border:1px solid var(--line);border-radius:28px}
+}
+
+/* Version 5.0 navigation and orientation */
+.trip-progress{padding:10px 13px;background:#f7f3ec;border-bottom:1px solid var(--line)}
+.progress-track{height:7px;background:#e2dbd1;border-radius:999px;overflow:hidden;margin-top:6px}.progress-fill{height:100%;background:var(--al,#87967d);border-radius:999px}
+.jump-nav{display:flex;gap:7px;overflow-x:auto;padding:9px 0 3px}.jump-nav a{white-space:nowrap;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:700}
+.today-focus{border-left:5px solid var(--gold,#b08a58);background:#faf4e8}.status{display:inline-block;border-radius:999px;padding:5px 9px;font-size:.75rem;font-weight:800}.status.book{background:#f8e5dc;color:#7b3d2e}.status.wait{background:#e8efe7;color:#425c45}.status.done{background:#e4edf3;color:#405a70}.status.optional{background:#eee9f2;color:#604d70}
+.day-controls{display:flex;justify-content:space-between;gap:8px;margin-top:12px}.day-controls a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px;font-weight:700;font-size:.82rem}
+.timeline{display:grid;gap:8px}.timeline .slot{border-left:4px solid var(--al,#87967d);background:#f3eee6;border-radius:0 12px 12px 0;padding:10px 12px}.timeline .slot b{display:block;font-size:.72rem;text-transform:uppercase;color:var(--muted)}
+.res-row{display:grid;grid-template-columns:1.15fr .75fr;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}.res-row:last-child{border-bottom:0}.res-row h4{margin:0 0 4px}.res-meta{text-align:right;font-size:.82rem}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.dashboard-grid .fact{min-height:78px}
+@media(max-width:520px){.res-row{grid-template-columns:1fr}.res-meta{text-align:left}.dashboard-grid{grid-template-columns:1fr 1fr}}
+
+/* Version 5.3 audited reservations layout */
+.reservation-jumps{display:flex;gap:7px;overflow-x:auto;padding:4px 0}.reservation-jumps a{white-space:nowrap;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 11px;font-size:.8rem;font-weight:750}.reservation-section{padding:0;overflow:hidden}.section-title{padding:17px 17px 13px;background:#f3eee6;border-bottom:1px solid var(--line)}.section-title h2{margin:.15rem 0 0;font-size:1.45rem}.reservation-section .res-row{margin:0 17px}.reservation-section .res-row:last-of-type{border-bottom:0}.action-note{margin-top:7px;font-weight:750;line-height:1.35}.section-return{padding:12px 17px 16px;border-top:1px solid var(--line);text-align:right}.section-return a{text-decoration:none;color:var(--muted);font-weight:700;font-size:.8rem}@media(max-width:520px){.reservation-section .res-row{margin:0 14px}.section-title{padding:15px 14px}.res-meta{padding-bottom:3px}}
+
+/* v5.4 rules page */
+#countdown{border-left:5px solid var(--gold,#b08a58)}
+.checklist div{margin:7px 0}
+</style></head><body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · FIELD GUIDE</div><h1>Travel Rules &amp; Departure Countdown</h1><div class="sub">What to complete before departure and what to remember on the road</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a class="active" href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main id="top">
+<div class="card warning">
+<h3>Departure is September 2</h3>
+<p>The timeline below is date-based for the final four weeks. Reservation timing matches the Reservations dashboard and Travel Hub.</p>
+</div>
+<section class="card" id="countdown">
+<div class="section-title"><div class="eyebrow">August 6–9</div><h2>Complete now</h2></div>
+<div class="checklist">
+<div>☐ Purchase travel medical insurance and save the policy, emergency number and coverage summary offline.</div>
+<div>☐ Buy any unbooked timed Paris entries: Sainte-Chapelle; Musée d’Orsay only if going inside; Eiffel Tower only if ascending.</div>
+<div>☐ Buy the direct Paris → Strasbourg First Class train if it is not already booked.</div>
+<div>☐ Choose and buy Montreux → Zürich Airport in SBB Mobile, preferably the one-change Lausanne routing.</div>
+<div>☐ Confirm both private-driver dates, pickup details and the €545 cash payment for each day.</div>
+<div>☐ Verify passports, prescription supplies and entry requirements.</div>
+</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">August 10–16</div><h2>Three weeks before departure</h2></div>
+<div class="checklist">
+<div>☐ Install or update SBB Mobile, SNCF Connect, airline, Uber, Google Maps, Google Translate and Google Drive.</div>
+<div>☐ Confirm both travelers can open their own Swiss Half Fare Travelcards and identification.</div>
+<div>☐ Make any desired restaurant reservations marked “reservation recommended” in the city guides.</div>
+<div>☐ Confirm hotel bookings, airport transfers and private-driver contact details.</div>
+<div>☐ Test plug adapters, charging cables and power banks.</div>
+</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">August 17–23</div><h2>Two weeks before departure</h2></div>
+<div class="checklist">
+<div>☐ Review the Daily Guide together and identify the few activities that are priorities versus optional.</div>
+<div>☐ Create envelopes or a secure cash plan for the two €545 Strasbourg driver payments.</div>
+<div>☐ Refill prescriptions and pack a written medication list.</div>
+<div>☐ Confirm primary and backup payment cards, ATM access and international contact numbers.</div>
+<div>☐ Finalize clothing, footwear and luggage weight.</div>
+</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">August 24–30</div><h2>One week before departure</h2></div>
+<div class="checklist">
+<div>☐ Download all rail, museum, hotel, flight, driver and insurance documents for offline access.</div>
+<div>☐ Download offline Google Maps for Paris, Strasbourg, the Bernese Oberland, Montreux and Zürich.</div>
+<div>☐ Confirm the website and critical PDFs open on both phones without relying on cellular service.</div>
+<div>☐ Review the forecast for packing only. Do not commit to Swiss mountain excursions yet.</div>
+<div>☐ Notify trusted family of the itinerary and emergency contact method.</div>
+</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">August 31–September 1</div><h2>Final 48 hours</h2></div>
+<div class="checklist">
+<div>☐ Complete airline check-in when it opens and save boarding passes offline.</div>
+<div>☐ Charge phones and power banks; pack chargers and adapters in carry-on luggage.</div>
+<div>☐ Confirm airport transportation and departure time from home.</div>
+<div>☐ Put passports, medications, payment cards and insurance information in their assigned travel locations.</div>
+<div>☐ Secure the house and complete the final luggage check.</div>
+</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">September 2</div><h2>Departure day essentials</h2></div>
+<div class="checklist">
+<div>☐ Passports and wallets</div><div>☐ Phones and boarding passes</div>
+<div>☐ Medications</div><div>☐ Power banks and charging cables</div>
+<div>☐ Insurance and emergency contacts</div><div>☐ House secured</div>
+</div>
+</section>
+<section class="card" id="rules">
+<div class="section-title"><div class="eyebrow">Money</div><h2>Payments and cash</h2></div>
+<div class="item"><b>Use local currency.</b><br/>Choose EUR in France and CHF in Switzerland. Decline any offer to charge or convert the transaction in USD.</div>
+<div class="item"><b>Use bank-operated ATMs.</b><br/>Avoid exchange counters and standalone tourist ATMs. At an ATM, decline its currency conversion and let the card network perform the exchange.</div>
+<div class="item"><b>Use credit cards for routine purchases.</b><br/>Carry modest incidental cash, plus the separately secured cash required for the two Strasbourg driver days.</div>
+<div class="item"><b>Keep a backup payment method separate.</b><br/>Do not store every card and all cash in the same wallet or bag.</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">Trains</div><h2>Rail rules</h2></div>
+<div class="item"><b>Use the operating app for live information.</b><br/>SBB Mobile is the primary source for Swiss platforms, delays and connection changes; SNCF Connect is useful for French operations.</div>
+<div class="item"><b>Board the correct train before optimizing the seat.</b><br/>If a connection is short, get aboard first. Class markings are shown outside the coaches.</div>
+<div class="item"><b>Prepare before the station stop.</b><br/>Gather bags and move toward the door several minutes before a short connection.</div>
+<div class="item"><b>Keep tickets and discount cards offline.</b><br/>Each traveler should be able to display the required ticket, Half Fare Travelcard and identification.</div>
+<div class="item"><b>Follow the booked train restrictions.</b><br/>Saver and international tickets may be valid only on the listed services. If a railway delay breaks the connection, use the app or staff for the next valid routing.</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">Tickets and weather</div><h2>Sightseeing rules</h2></div>
+<div class="item"><b>Keep fixed reservations limited.</b><br/>Timed attractions anchor the day; the surrounding itinerary remains flexible.</div>
+<div class="item"><b>Weather decides the Swiss mountain day.</b><br/>Jungfraujoch is purchased 1–2 days ahead only with excellent visibility. Männlichen and Mürren are bought the day before or day of travel. Lake Brienz is chosen 1–3 days ahead.</div>
+<div class="item"><b>Weather also decides the cruises.</b><br/>Book Vedettes du Pont Neuf and Batorama about 2–5 days ahead after checking the forecast.</div>
+<div class="item"><b>Free does not always mean no planning.</b><br/>Notre-Dame is free but an optional timed slot can reduce uncertainty. Other free sites may still have changing opening hours or security lines.</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">Technology</div><h2>Phone and document rules</h2></div>
+<div class="item"><b>Maintain two forms of access.</b><br/>Keep documents in the relevant app and as an offline PDF or screenshot in Google Drive.</div>
+<div class="item"><b>Download maps before departure.</b><br/>Offline maps reduce dependence on roaming and mountain coverage.</div>
+<div class="item"><b>Keep phones charged.</b><br/>Start full, carry a power bank and avoid using the only phone as the sole repository for both travelers.</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">Safety and pace</div><h2>Daily conduct</h2></div>
+<div class="item"><b>Secure valuables.</b><br/>Use front pockets or closed bags in crowds and on transit. Keep phones, wallets and passports off café tables.</div>
+<div class="item"><b>Carry passports deliberately.</b><br/>Use the hotel safe when originals are unnecessary; keep secure access when border, rail or identification checks may require them.</div>
+<div class="item"><b>Choose quality over quantity.</b><br/>The itinerary is a framework, not a completion requirement. A longer meal, park visit or neighborhood discovery can replace an optional stop.</div>
+<div class="item"><b>Use the easier return when energy drops.</b><br/>Taxis and transit are tools, not failures. Save walking energy for the parts of the day that matter most.</div>
+</section>
+<section class="card">
+<div class="section-title"><div class="eyebrow">Health</div><h2>Medical readiness</h2></div>
+<div class="item"><b>Carry travel medical insurance details.</b><br/>Keep the policy number, emergency assistance line, coverage summary and claims instructions accessible offline.</div>
+<div class="item"><b>Keep medications in carry-on luggage.</b><br/>Bring sufficient supply for the trip, a small buffer and a written medication list using generic names.</div>
+<div class="item"><b>Know the escalation path.</b><br/>For urgent symptoms, use local emergency services; for non-emergency care, contact the insurer’s assistance line and the hotel front desk.</div>
+</section>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.3</div></div></body></html>
