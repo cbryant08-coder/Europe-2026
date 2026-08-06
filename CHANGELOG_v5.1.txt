@@ -1,8 +1,0 @@
-THE LONG EXHALE — VERSION 5.1
-
-Changes
-- Expanded Reservations & Tickets into a comprehensive trip inventory, including optional and no-reservation sites.
-- Added Luxembourg Gardens as a free optional stop on Paris Day 3 and to the reservation inventory.
-- Added sticky, horizontally scrollable within-city day navigation to Paris, Strasbourg, Wengen, Montreux, and Zurich.
-- Added Previous, Day Menu, and Next controls at the bottom of each destination-day section.
-- Preserved the Daily Guide and all existing destination content and assets.
