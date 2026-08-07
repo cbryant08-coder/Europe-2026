@@ -53,6 +53,18 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .city-day-nav .jump-nav{padding:0}.city-day-nav .jump-nav a.current{background:var(--ink);color:#fff}
 .section-nav{display:flex;gap:8px;margin:12px 0 0}.section-nav a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 7px;font-weight:750;font-size:.78rem}.section-nav a.top-link{flex:.72}
 @media(max-width:520px){.city-day-nav{top:57px;border-radius:0;margin-left:-13px;margin-right:-13px;border-left:0;border-right:0}.section-nav{flex-wrap:wrap}.section-nav a{min-width:29%}}
+
+/* Version 5.6 daily-use enhancements */
+.trip-context{margin:10px 0 12px;padding:9px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:.8rem;font-weight:800;color:var(--muted);letter-spacing:.02em}
+.day-glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 12px}
+.day-glance .glance-cell{background:var(--soft,#f7f4ee);border:1px solid var(--line);border-radius:12px;padding:9px 10px;min-width:0}
+.day-glance .glance-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:3px}
+.day-glance .glance-value{font-size:.82rem;font-weight:700;line-height:1.25}
+.tomorrow-card{margin-top:12px;border-left:4px solid var(--gold,#b08a58)}
+.tomorrow-card .eyebrow{margin-bottom:3px}
+.city-day-nav .jump-nav a.active-day{background:var(--ink);color:#fff;border-color:var(--ink)}
+.weather-flex-note{font-size:.78rem;color:var(--muted);margin-top:5px}
+@media(max-width:760px){.day-glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Zurich Airport</h1><div class="sub">September 21–22 · Hyatt Regency The Circle</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a class="active" href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">FINAL NIGHT</div><h2>Ease over one more city</h2><p>The Circle keeps the final evening calm and puts you steps from the airport.</p></div>
@@ -66,13 +78,28 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="restaurant"><h4>🌱 Negishi Sushi Bar</h4><div class="tiny">Inside The Circle.</div><ul><li>Clearly labeled vegan sushi, inari, edamame and miso soup.</li><li>Casual backup with later service.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Negishi+Sushi+Bar+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
 <div class="restaurant"><h4>🌱 Rice Up!</h4><div class="tiny">Inside The Circle.</div><ul><li>Build-your-own rice/noodle bowls with tofu and vegan sauces.</li><li>Best quick option if you arrive before closing.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rice+Up+The+Circle+Zurich" rel="noopener" target="_blank">Exact map</a></div>
 </div>
-<div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 20 · Arrival</a><a href="#departure">Day 21 · Fly Home</a></div></div><section class="day" id="arrival">
-<div class="card dayhead"><div class="muted">Final afternoon/evening</div><h2>Arrive, eat, and stop</h2><p>No Zurich city excursion. Protect the final night and the flight home.</p><div class="quick-grid"><div class="fact"><b>Arrival</b>Afternoon</div><div class="fact"><b>Walking</b>Easy indoor complex</div><div class="fact"><b>Dinner</b>The Circle</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
+<div class="trip-context">Zürich Airport · Days 20–21 · Sept 21–22 · Use the sticky day menu to jump at any time.</div><div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 20 · Arrival</a><a href="#departure">Day 21 · Fly Home</a></div></div><section class="day" id="arrival">
+<div class="card dayhead"><div class="muted">Final afternoon/evening</div><h2>Arrive, eat, and stop</h2><p>No Zurich city excursion. Protect the final night and the flight home.</p><div class="quick-grid"><div class="fact"><b>Arrival</b>Afternoon</div><div class="fact"><b>Walking</b>Easy indoor complex</div><div class="fact"><b>Dinner</b>The Circle</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Day 20<br/>Mon, Sept 21</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Easy airport-hotel arrival</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Moderate</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Rail: buy this week in SBB Mobile</div></div>
+</div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>A calm meal and an early reset rather than squeezing in one more city.</p></div>
 <details open=""><summary>Simple plan</summary><div class="inside"><div class="item">Check in → confirm tomorrow’s airline terminal/check-in information → dinner → prepare travel clothes and carry-ons → sleep.</div></div></details>
-<div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#departure">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Day 21 · Tue, Sept 22</b><br/>
+          Fly home<div class="tiny">Continue in the destination guide.</div>
+<a class="mini-btn" href="#departure">Open next day</a>
+</div><div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#departure">Next →</a></div></section>
 <section class="day" id="departure">
-<div class="card dayhead"><div class="muted">Departure day</div><h2>Fly home</h2><p>A simple indoor transfer from the Hyatt to Zurich Airport.</p><div class="quick-grid"><div class="fact"><b>Flight</b>1:10 PM</div><div class="fact"><b>Leave room</b>Around 9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk through complex</div></div></div>
+<div class="card dayhead"><div class="muted">Departure day</div><h2>Fly home</h2><p>A simple indoor transfer from the Hyatt to Zurich Airport.</p><div class="quick-grid"><div class="fact"><b>Flight</b>1:10 PM</div><div class="fact"><b>Leave room</b>Around 9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk through complex</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Day 21<br/>Tue, Sept 22</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Departure day</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Moderate</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Airline check-in when it opens</div></div>
+</div>
 <details open=""><summary>✈️ Departure logistics</summary><div class="inside">
 <div class="item"><b>Night before:</b> Verify airline terminal, check-in desk opening, baggage rules and any schedule change in the airline app.</div>
 <div class="item"><b>Morning:</b> Finish packing, eat at the hotel or airport, and leave the room around 9:30–10:00 AM unless the airline directs otherwise.</div>
@@ -80,5 +107,24 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="item"><b>Buffer:</b> For the 1:10 PM international departure, target the airport check-in/security process roughly three hours before takeoff.</div>
 <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Zurich+Airport+departures" rel="noopener" target="_blank">Zurich Airport map</a>
 </div></details>
-<div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
+<div class="card tomorrow-card">
+<div class="eyebrow">TRIP COMPLETE</div>
+<b>Fly home.</b><div class="tiny">No next itinerary day.</div>
+</div><div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><script>
+    // v5.6: keep the sticky day menu synchronized with the section in view.
+    (function(){
+      const links=[...document.querySelectorAll('.city-day-nav a[href^="#"]')];
+      const pairs=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+      if(!pairs.length || !('IntersectionObserver' in window)) return;
+      const obs=new IntersectionObserver(entries=>{
+        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+        if(!visible.length) return;
+        const id='#'+visible[0].target.id;
+        links.forEach(a=>a.classList.toggle('active-day',a.getAttribute('href')===id));
+        const active=links.find(a=>a.getAttribute('href')===id);
+        if(active) active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+      },{rootMargin:'-25% 0px -60% 0px',threshold:[0,.15,.35]});
+      pairs.forEach(x=>obs.observe(x.el));
+    })();
+    </script></body></html>

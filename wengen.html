@@ -53,6 +53,18 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .city-day-nav .jump-nav{padding:0}.city-day-nav .jump-nav a.current{background:var(--ink);color:#fff}
 .section-nav{display:flex;gap:8px;margin:12px 0 0}.section-nav a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 7px;font-weight:750;font-size:.78rem}.section-nav a.top-link{flex:.72}
 @media(max-width:520px){.city-day-nav{top:57px;border-radius:0;margin-left:-13px;margin-right:-13px;border-left:0;border-right:0}.section-nav{flex-wrap:wrap}.section-nav a{min-width:29%}}
+
+/* Version 5.6 daily-use enhancements */
+.trip-context{margin:10px 0 12px;padding:9px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:.8rem;font-weight:800;color:var(--muted);letter-spacing:.02em}
+.day-glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 12px}
+.day-glance .glance-cell{background:var(--soft,#f7f4ee);border:1px solid var(--line);border-radius:12px;padding:9px 10px;min-width:0}
+.day-glance .glance-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:3px}
+.day-glance .glance-value{font-size:.82rem;font-weight:700;line-height:1.25}
+.tomorrow-card{margin-top:12px;border-left:4px solid var(--gold,#b08a58)}
+.tomorrow-card .eyebrow{margin-bottom:3px}
+.city-day-nav .jump-nav a.active-day{background:var(--ink);color:#fff;border-color:var(--ink)}
+.weather-flex-note{font-size:.78rem;color:var(--muted);margin-top:5px}
+@media(max-width:760px){.day-glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · MOBILE GUIDE V4.1</div><h1>Wengen Base Camp</h1><div class="sub">September 13–19 · Hotel Bellevue · Six nights</div></header>
 <nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a class="active" href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav>
@@ -75,16 +87,31 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="tiny">Inside Grand Hotel Belvedere.</div><ul><li>Casual daytime terrace option with mountain views.</li><li>Useful for a light lunch in Wengen, not a destination meal.</li></ul>
 <div class="reserve">Reservation: 🟢 Usually walk-in</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Belvedere+Wengen" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.beaumier.com/en/properties/grand-hotel-belvedere/food-drink/" rel="noopener" target="_blank">Website</a></div>
 </div>
-<div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 12 · Arrival</a><a href="#jungfraujoch">Jungfraujoch</a><a href="#panorama">Panorama Trail</a><a href="#murren">Mürren</a><a href="#lauterbrunnen">Lauterbrunnen</a><a href="#brienz">Lake Brienz</a><a href="#stargazing">Stargazing</a></div></div><section class="day" id="arrival">
+<div class="trip-context">Wengen · Days 12–17 · Sept 13–18 · Use the sticky day menu to jump at any time.</div><div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 12 · Arrival</a><a href="#jungfraujoch">Jungfraujoch</a><a href="#panorama">Panorama Trail</a><a href="#murren">Mürren</a><a href="#lauterbrunnen">Lauterbrunnen</a><a href="#brienz">Lake Brienz</a><a href="#stargazing">Stargazing</a></div></div><section class="day" id="arrival">
 <div class="card dayhead"><div class="muted">Arrival day</div><h2>Settle into Wengen</h2><p>Learn the village, stock the room, and let the first Alpine evening be easy.</p>
-<div class="quick-grid"><div class="fact"><b>Leave station</b>After hotel arrival</div><div class="fact"><b>Walking</b>Easy village loop</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave station</b>After hotel arrival</div><div class="fact"><b>Walking</b>Easy village loop</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Hotel whenever ready</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Day 12<br/>Sun, Sept 13</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Arrival + village orientation</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Moderate</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Rail ticket purchased</div></div>
+</div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>Your first uninterrupted valley view, followed by drinks and snacks back at the hotel.</p></div>
 <details open=""><summary>🗺️ Simple arrival loop</summary><div class="inside"><div class="route-diagram"><span>Hotel Bellevue</span><i>→</i><span>Village center</span><i>→</i><span>Coop</span><i>→</i><span>Church viewpoint</span><i>→</i><span>Hotel</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen+to+Coop+Wengen+to+Wengen+Church" rel="noopener" target="_blank">Open village map</a></div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Preferred:</b> Judy’s at the hotel if you want dinner. Otherwise build a room picnic at Coop.</div></div></details>
-<div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#jungfraujoch">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Weather-flex · Sept 14–18</b><br/>
+          Jungfraujoch — Top of Europe<div class="tiny">Use the sticky menu if conditions call for a different choice.</div>
+<a class="mini-btn" href="#jungfraujoch">Open next day</a>
+</div><div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#jungfraujoch">Next →</a></div></section>
 <section class="day" id="jungfraujoch">
 <div class="card dayhead"><div class="muted">Excellent visibility only</div><h2>Jungfraujoch — Top of Europe</h2><p>This is the day to move when the forecast and webcams are best.</p>
-<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 7:30–8:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Easy, but high altitude</div><div class="fact"><b>Reserve</b>Book once forecast firms up</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 7:30–8:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Easy, but high altitude</div><div class="fact"><b>Reserve</b>Book once forecast firms up</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Weather-flex<br/>Sept 14–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Use the clearest mountain day</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Buy 1–2 days ahead only with excellent visibility</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <div class="card highlight"><h3>⭐ Why it earns a day</h3><p>The glacier, high-Alpine environment and railway journey are genuinely unique—but the price and time are justified only when visibility is excellent.</p></div>
 <details open=""><summary>🚆 Route and logistics</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Kleine Scheidegg</span><i>→ train</i><span>Eigergletscher</span><i>→ train</i><span>Jungfraujoch</span></div>
@@ -97,10 +124,20 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 </div></details>
 <details><summary>🌤️ Go / no-go</summary><div class="inside"><div class="weather-row"><div>☀️<br/><b>Go</b><br/>Clear peaks</div><div>⛅<br/><b>Go</b><br/>High clouds</div><div>☁️<br/><b>Wait</b><br/>Summit obscured</div><div>🌧️<br/><b>Skip</b><br/>Poor visibility</div></div></div></details>
 <details><summary>🍽️ Food and comfort</summary><div class="inside"><div class="item"><b>Preferred:</b> Pack breakfast snacks and a simple picnic from Coop the evening before. Summit food is backup, not the reason to go.</div><div class="item"><b>Restrooms:</b> Wengen station, Kleine Scheidegg, Eigergletscher and Jungfraujoch complex.</div></div></details>
-<div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#panorama">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Weather-flex · Sept 14–18</b><br/>
+          Panorama Trail<div class="tiny">Use the sticky menu if conditions call for a different choice.</div>
+<a class="mini-btn" href="#panorama">Open next day</a>
+</div><div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#panorama">Next →</a></div></section>
 <section class="day" id="panorama">
 <div class="card dayhead"><div class="muted">Clear or partly cloudy</div><h2>Panorama Trail — Männlichen to Kleine Scheidegg</h2><p>The highest scenery-to-effort ratio of the stay.</p>
-<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 3:30–5:30 PM</div><div class="fact"><b>Walking</b>About 3 miles</div><div class="fact"><b>Difficulty</b>Easy, mostly downhill</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 3:30–5:30 PM</div><div class="fact"><b>Walking</b>About 3 miles</div><div class="fact"><b>Difficulty</b>Easy, mostly downhill</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Weather-flex<br/>Sept 14–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Männlichen → Kleine Scheidegg</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Buy cableway day before or day of after weather check</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>Walk toward the Eiger, Mönch and Jungfrau for most of the route rather than hiking to a single viewpoint.</p></div>
 <details open=""><summary>🚠 Exactly how the day works</summary><div class="inside">
 <div class="route-diagram"><span>Hotel</span><i>→ walk</i><span>Wengen cable car</span><i>→ lift</i><span>Männlichen</span><i>→ walk</i><span>Kleine Scheidegg</span><i>→ train</i><span>Wengen</span></div>
@@ -114,10 +151,20 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 </div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Primary:</b> Choose a Kleine Scheidegg terrace only after confirming a workable vegan plate.</div><div class="item"><b>Best fallback:</b> Picnic from Coop Wengen at a scenic stop before the busy hub.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Reliable at the Männlichen lift station, Kleine Scheidegg station and mountain restaurants.</div></div></details>
-<div class="section-nav"><a href="#jungfraujoch">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#murren">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Weather-flex · Sept 14–18</b><br/>
+          Mürren Village Day<div class="tiny">Use the sticky menu if conditions call for a different choice.</div>
+<a class="mini-btn" href="#murren">Open next day</a>
+</div><div class="section-nav"><a href="#jungfraujoch">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#murren">Next →</a></div></section>
 <section class="day" id="murren">
 <div class="card dayhead"><div class="muted">Good mountain visibility</div><h2>Mürren Village Day</h2><p>A car-free village on the opposite side of the valley with excellent return flexibility.</p>
-<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 4:00–6:00 PM</div><div class="fact"><b>Transport</b>Train + cable car + train</div><div class="fact"><b>Walking</b>Easy village wandering</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:00 AM</div><div class="fact"><b>Return</b>Around 4:00–6:00 PM</div><div class="fact"><b>Transport</b>Train + cable car + train</div><div class="fact"><b>Walking</b>Easy village wandering</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Weather-flex<br/>Sept 14–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Village + mountain scenery</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Buy transport day before or day of</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <div class="card highlight"><h3>⭐ Why this is worth it</h3><p>Mürren gives you a different angle on the same mountains and a quieter village atmosphere than Wengen.</p></div>
 <details open=""><summary>🚆 Getting there and back</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ cable car</i><span>Grütschalp</span><i>→ mountain train</i><span>Mürren</span></div>
@@ -134,10 +181,20 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="tiny">In Hotel Regina Mürren.</div><ul><li>Possible terrace lunch if the current menu can accommodate vegan diners.</li><li>Confirm before committing.</li></ul>
 <div class="reserve">Reservation: 🟡 Verify menu</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Regina+Murren" rel="noopener" target="_blank">Map</a><a class="mini-btn" href="https://www.regina-muerren.ch/" rel="noopener" target="_blank">Website</a></div><div class="item"><b>Preferred fallback:</b> Eat early in Wengen or bring a picnic from Coop. Mürren is a scenery day, not a culinary anchor.</div></div></details>
 <details><summary>🧺 Picnic and restrooms</summary><div class="inside"><div class="item"><b>Picnic:</b> Bring supplies from Wengen and choose a bench along the village edge or near Allmendhubel if you add the funicular.</div><div class="item"><b>Restrooms:</b> Lauterbrunnen station, Mürren station, cafés and restaurants.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Murren+Switzerland" rel="noopener" target="_blank">Mürren map</a></div></details>
-<div class="section-nav"><a href="#panorama">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#lauterbrunnen">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Weather-flex · Sept 14–18</b><br/>
+          Lauterbrunnen Valley<div class="tiny">Use the sticky menu if conditions call for a different choice.</div>
+<a class="mini-btn" href="#lauterbrunnen">Open next day</a>
+</div><div class="section-nav"><a href="#panorama">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#lauterbrunnen">Next →</a></div></section>
 <section class="day" id="lauterbrunnen">
 <div class="card dayhead"><div class="muted">Works in mixed weather</div><h2>Lauterbrunnen Valley</h2><p>Waterfalls, village scale and an easy valley walk.</p>
-<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Around 3:00–5:30 PM</div><div class="fact"><b>Transport</b>Direct train</div><div class="fact"><b>Walking</b>2–6 miles, flexible</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Around 3:00–5:30 PM</div><div class="fact"><b>Transport</b>Direct train</div><div class="fact"><b>Walking</b>2–6 miles, flexible</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Weather-flex<br/>Sept 14–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Valley day</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Keep flexible; pay local transport as needed</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>See Staubbach Falls beside the village, then decide whether to continue along the valley floor.</p></div>
 <details open=""><summary>🚆 Logistics</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ walk/bus</i><span>Valley</span><i>→ train</i><span>Wengen</span></div>
@@ -154,10 +211,20 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="tiny">Central Lauterbrunnen.</div><ul><li>Light food, coffee and vegan sweets.</li><li>Good comfort stop if the weather turns.</li></ul>
 <div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Flavours+Cafe+Lauterbrunnen" rel="noopener" target="_blank">Map</a></div><div class="item"><b>Picnic:</b> Bring food from Wengen and eat beside the river or with a Staubbach view. Avoid sitting in private meadow grass.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Reliable at Lauterbrunnen station, Trümmelbach visitor facilities and your café/restaurant stop.</div></div></details>
-<div class="section-nav"><a href="#murren">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#brienz">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Weather-flex · Sept 14–18</b><br/>
+          Lake Brienz Cruise<div class="tiny">Use the sticky menu if conditions call for a different choice.</div>
+<a class="mini-btn" href="#brienz">Open next day</a>
+</div><div class="section-nav"><a href="#murren">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#brienz">Next →</a></div></section>
 <section class="day" id="brienz">
 <div class="card dayhead"><div class="muted">Dry lower-elevation day</div><h2>Lake Brienz Cruise</h2><p>A full, relaxing day built around one scenic boat journey.</p>
-<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 8:30–9:00 AM</div><div class="fact"><b>Boat</b>Late morning / midday</div><div class="fact"><b>Return</b>Around 5:00–6:30 PM</div><div class="fact"><b>Reserve</b>Optional; weather-led</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 8:30–9:00 AM</div><div class="fact"><b>Boat</b>Late morning / midday</div><div class="fact"><b>Return</b>Around 5:00–6:30 PM</div><div class="fact"><b>Reserve</b>Optional; weather-led</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Weather-flex<br/>Sept 14–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Lake day / lower-elevation option</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Choose and buy 1–3 days ahead after forecast + timetable</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <div class="card highlight"><h3>⭐ Recommended plan</h3><p>Cruise one way from Interlaken Ost to Brienz, explore briefly, then return to Wengen by train. This avoids retracing the lake by boat.</p></div>
 <details open=""><summary>🚆 Wengen to the boat and back</summary><div class="inside">
 <div class="route-diagram"><span>Wengen</span><i>→ train</i><span>Lauterbrunnen</span><i>→ train</i><span>Interlaken Ost</span><i>→ boat</i><span>Brienz</span><i>→ trains</i><span>Wengen</span></div>
@@ -177,11 +244,42 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Brienz+lake+promenade" rel="noopener" target="_blank">Brienz waterfront</a>
 </div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Interlaken Ost station, scheduled BLS boats, Brienz station and waterfront cafés.</div></div></details>
-<div class="section-nav"><a href="#lauterbrunnen">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#stargazing">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Optional evening · Sept 13–18</b><br/>
+          Stargazing<div class="tiny">Continue in the destination guide.</div>
+<a class="mini-btn" href="#stargazing">Open next day</a>
+</div><div class="section-nav"><a href="#lauterbrunnen">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#stargazing">Next →</a></div></section>
 <section class="day" id="stargazing">
 <div class="card dayhead"><div class="muted">Choose the clearest evening</div><h2>Stargazing near Hotel Bellevue</h2><p>A quiet 20–30 minute experience, not an expedition.</p>
-<div class="quick-grid"><div class="fact"><b>Leave</b>After hotel wind-down</div><div class="fact"><b>Walking</b>Very short</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Whenever ready</div></div></div>
+<div class="quick-grid"><div class="fact"><b>Leave</b>After hotel wind-down</div><div class="fact"><b>Walking</b>Very short</div><div class="fact"><b>Tickets</b>None</div><div class="fact"><b>Return</b>Whenever ready</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Optional evening<br/>Sept 13–18</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Clear-night add-on</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Flexible</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">No advance booking</div></div>
+</div><div class="weather-flex-note">This excursion is intentionally not assigned to a fixed trip day. Choose among Sept 14–18 based on weather, visibility and energy.</div>
 <details open=""><summary>🌌 Simple plan</summary><div class="inside"><div class="item">Check cloud cover after dinner. Use the hotel terrace first; if nearby lights are intrusive, walk a short distance beyond the village glow while staying on safe paved paths.</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Bellevue+Wengen" rel="noopener" target="_blank">Hotel map</a></div></details>
-<div class="section-nav"><a href="#brienz">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Day 18 · Sat, Sept 19</b><br/>
+          Wengen → Montreux<div class="tiny">GoldenPass transfer day</div>
+<a class="mini-btn" href="daily.html#day18">Open next day</a>
+</div><div class="section-nav"><a href="#brienz">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
 <div class="card decision"><h3>Before leaving the hotel each day</h3><div class="checklist"><div>🎫 Tickets purchased or confirmed unnecessary</div><div>🌤️ Operating status and weather checked</div><div>🥪 Picnic/snacks packed when needed</div><div>🧥 Layers and rain shell</div><div>🔋 Phone and battery pack charged</div><div>🚻 Restroom before departure</div></div></div>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><script>
+    // v5.6: keep the sticky day menu synchronized with the section in view.
+    (function(){
+      const links=[...document.querySelectorAll('.city-day-nav a[href^="#"]')];
+      const pairs=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+      if(!pairs.length || !('IntersectionObserver' in window)) return;
+      const obs=new IntersectionObserver(entries=>{
+        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+        if(!visible.length) return;
+        const id='#'+visible[0].target.id;
+        links.forEach(a=>a.classList.toggle('active-day',a.getAttribute('href')===id));
+        const active=links.find(a=>a.getAttribute('href')===id);
+        if(active) active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+      },{rootMargin:'-25% 0px -60% 0px',threshold:[0,.15,.35]});
+      pairs.forEach(x=>obs.observe(x.el));
+    })();
+    </script></body></html>

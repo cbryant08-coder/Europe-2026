@@ -53,6 +53,18 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .city-day-nav .jump-nav{padding:0}.city-day-nav .jump-nav a.current{background:var(--ink);color:#fff}
 .section-nav{display:flex;gap:8px;margin:12px 0 0}.section-nav a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 7px;font-weight:750;font-size:.78rem}.section-nav a.top-link{flex:.72}
 @media(max-width:520px){.city-day-nav{top:57px;border-radius:0;margin-left:-13px;margin-right:-13px;border-left:0;border-right:0}.section-nav{flex-wrap:wrap}.section-nav a{min-width:29%}}
+
+/* Version 5.6 daily-use enhancements */
+.trip-context{margin:10px 0 12px;padding:9px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:.8rem;font-weight:800;color:var(--muted);letter-spacing:.02em}
+.day-glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 12px}
+.day-glance .glance-cell{background:var(--soft,#f7f4ee);border:1px solid var(--line);border-radius:12px;padding:9px 10px;min-width:0}
+.day-glance .glance-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:3px}
+.day-glance .glance-value{font-size:.82rem;font-weight:700;line-height:1.25}
+.tomorrow-card{margin-top:12px;border-left:4px solid var(--gold,#b08a58)}
+.tomorrow-card .eyebrow{margin-bottom:3px}
+.city-day-nav .jump-nav a.active-day{background:var(--ink);color:#fff;border-color:var(--ink)}
+.weather-flex-note{font-size:.78rem;color:var(--muted);margin-top:5px}
+@media(max-width:760px){.day-glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head>
 <body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Montreux</h1><div class="sub">September 19–21 · Grand Hotel Suisse Majestic</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a class="active" href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">LAKE GENEVA SHORE</div><h2>Two nights to exhale</h2><p>Montreux is intentionally simpler: promenade, Chillon, good food, and time to absorb the trip.</p></div>
@@ -68,15 +80,30 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="restaurant"><h4>🌱 Arctic Juice &amp; Café</h4><div class="tiny">Central Montreux.</div><ul><li>Hummus wraps, quinoa bowls, salads and avocado toast.</li><li>Best daytime option for a casual lunch.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Arctic+Juice+Cafe+Montreux" rel="noopener" target="_blank">Exact map</a></div>
 <div class="restaurant"><h4>🌱 La Table de Montreux</h4><div class="tiny">Central Montreux.</div><ul><li>Clearly labeled vegan bowl and avocado toast.</li><li>Practical backup rather than a destination restaurant.</li></ul><div class="reserve">Reservation: 🟢 Walk-in usually fine</div><a class="mini-btn" href="https://www.google.com/maps/search/?api=1&amp;query=La+Table+de+Montreux" rel="noopener" target="_blank">Exact map</a></div>
 </div>
-<div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 18 · Arrival</a><a href="#main-day">Day 19 · Chillon</a></div></div><section class="day" id="arrival">
-<div class="card dayhead"><div class="muted">Arrival afternoon</div><h2>Arrival + Lakefront</h2><p>Trade the Alps for the lake without turning arrival into another sightseeing marathon.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>After check-in</div><div class="fact"><b>Return</b>Before or after sunset</div><div class="fact"><b>Walking</b>Easy promenade</div><div class="fact"><b>Tickets</b>None</div></div></div>
+<div class="trip-context">Montreux · Days 18–19 · Sept 19–20 · Use the sticky day menu to jump at any time.</div><div class="city-day-nav" id="city-day-top"><div class="nav-label">Jump within this destination</div><div class="jump-nav"><a href="#arrival">Day 18 · Arrival</a><a href="#main-day">Day 19 · Chillon</a></div></div><section class="day" id="arrival">
+<div class="card dayhead"><div class="muted">Arrival afternoon</div><h2>Arrival + Lakefront</h2><p>Trade the Alps for the lake without turning arrival into another sightseeing marathon.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>After check-in</div><div class="fact"><b>Return</b>Before or after sunset</div><div class="fact"><b>Walking</b>Easy promenade</div><div class="fact"><b>Tickets</b>None</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Day 18<br/>Sat, Sept 19</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">GoldenPass arrival + promenade</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Moderate</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">GoldenPass purchased</div></div>
+</div>
 <div class="card highlight"><h3>🎯 Today’s Highlight</h3><p>Walk until the lakefront gives you a place worth sitting, then stop.</p></div>
 <details open=""><summary>🗺️ Arrival corridor</summary><div class="inside"><div class="route-diagram"><span>Hotel</span><i>→</i><span>Coop/Bakery</span><i>→</i><span>Freddie Mercury</span><i>→</i><span>Promenade</span><i>→</i><span>Hotel</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Hotel+Suisse+Majestic+Montreux+to+Coop+Rue+de+la+Paix+to+Freddie+Mercury+Statue+Montreux" rel="noopener" target="_blank">Open exact corridor</a></div></details>
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Primary:</b> Bao Lab + if you want a meal.</div><div class="item"><b>Most “you” option:</b> Coop picnic and wine along the promenade or in the room.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Hotel, Montreux station, restaurants and larger lakeside venues. Use the hotel before heading out.</div></div></details>
-<div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#main-day">Next →</a></div></section>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Day 19 · Sun, Sept 20</b><br/>
+          Chillon + Lakefront<div class="tiny">Continue in the destination guide.</div>
+<a class="mini-btn" href="#main-day">Open next day</a>
+</div><div class="section-nav"><a class="top-link" href="#city-day-top">↑ Day menu</a><a class="top-link" href="#city-day-top">Day menu</a><a href="#main-day">Next →</a></div></section>
 <section class="day" id="main-day">
-<div class="card dayhead"><div class="muted">Main Montreux day</div><h2>Chillon + Lakefront</h2><p>Visit the castle, then return along the shore. No Lake Geneva cruise.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Flexible; mostly flat</div><div class="fact"><b>Tickets</b>Buy Chillon online</div></div></div>
+<div class="card dayhead"><div class="muted">Main Montreux day</div><h2>Chillon + Lakefront</h2><p>Visit the castle, then return along the shore. No Lake Geneva cruise.</p><div class="quick-grid"><div class="fact"><b>Leave hotel</b>Around 9:30 AM</div><div class="fact"><b>Return</b>Mid-to-late afternoon</div><div class="fact"><b>Walking</b>Flexible; mostly flat</div><div class="fact"><b>Tickets</b>Buy Chillon online</div></div></div><div class="day-glance">
+<div class="glance-cell"><div class="glance-label">Trip day</div><div class="glance-value">Day 19<br/>Sun, Sept 20</div></div>
+<div class="glance-cell"><div class="glance-label">Primary focus</div><div class="glance-value">Chillon + relaxed lakefront</div></div>
+<div class="glance-cell"><div class="glance-label">Pace / decision</div><div class="glance-value">Moderate</div></div>
+<div class="glance-cell"><div class="glance-label">Tickets / action</div><div class="glance-value">Chillon ticket: book this week or on arrival</div></div>
+</div>
 <div class="card highlight"><h3>⭐ Why this day works</h3><p>Chillon supplies the major historical experience; the lakeside return supplies the atmosphere. A cruise would duplicate views rather than improve them.</p></div>
 <details open=""><summary>🏰 Logistics</summary><div class="inside">
 <div class="route-diagram"><span>Hotel</span><i>→ bus/train/walk</i><span>Chillon</span><i>→ promenade</i><span>Montreux</span></div>
@@ -90,5 +117,26 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <details><summary>🍽️ Food strategy</summary><div class="inside"><div class="item"><b>Recommended:</b> Return toward central Montreux for Arctic Juice or La Table rather than forcing a weak meal beside the castle.</div><div class="item"><b>Picnic:</b> Bring supplies from Coop and use a public lakeside bench after the castle.</div></div></details>
 <details><summary>🚻 Restrooms</summary><div class="inside"><div class="item">Hotel before leaving, Chillon visitor facilities, Territet/Montreux station and restaurants.</div></div></details>
 <div class="card decision"><h3>🚤 Lake Geneva cruise removed</h3><p>The promenade, Chillon and lake viewpoints already provide the best parts of the experience. Lake Brienz remains the trip’s dedicated boat day.</p></div>
-<div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
+<div class="card tomorrow-card">
+<div class="eyebrow">NEXT</div>
+<b>Day 20 · Mon, Sept 21</b><br/>
+          Montreux → Zürich Airport<div class="tiny">One-change Lausanne routing preferred</div>
+<a class="mini-btn" href="daily.html#day20">Open next day</a>
+</div><div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><script>
+    // v5.6: keep the sticky day menu synchronized with the section in view.
+    (function(){
+      const links=[...document.querySelectorAll('.city-day-nav a[href^="#"]')];
+      const pairs=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+      if(!pairs.length || !('IntersectionObserver' in window)) return;
+      const obs=new IntersectionObserver(entries=>{
+        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+        if(!visible.length) return;
+        const id='#'+visible[0].target.id;
+        links.forEach(a=>a.classList.toggle('active-day',a.getAttribute('href')===id));
+        const active=links.find(a=>a.getAttribute('href')===id);
+        if(active) active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+      },{rootMargin:'-25% 0px -60% 0px',threshold:[0,.15,.35]});
+      pairs.forEach(x=>obs.observe(x.el));
+    })();
+    </script></body></html>
