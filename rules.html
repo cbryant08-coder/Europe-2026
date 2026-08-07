@@ -53,6 +53,34 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 /* v5.4 rules page */
 #countdown{border-left:5px solid var(--gold,#b08a58)}
 .checklist div{margin:7px 0}
+
+/* Version 5.7 navigation fix + persistent top button */
+.back-to-top{
+  position:fixed;
+  right:16px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid var(--line,#d8d2c8);
+  background:rgba(255,255,255,.94);
+  color:var(--ink,#24343a);
+  box-shadow:0 4px 16px rgba(0,0,0,.14);
+  text-decoration:none;
+  font-size:1.05rem;
+  font-weight:800;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.back-to-top:hover{transform:translateY(-1px)}
+.back-to-top:focus{outline:3px solid rgba(176,138,88,.35);outline-offset:2px}
+@media(max-width:560px){
+  .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
+}
 </style></head><body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · FIELD GUIDE</div><h1>Travel Rules &amp; Departure Countdown</h1><div class="sub">What to complete before departure and what to remember on the road</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a class="active" href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main id="top">
 <div class="card warning">
 <h3>Departure is September 2</h3>
@@ -158,4 +186,4 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="item"><b>Keep medications in carry-on luggage.</b><br/>Bring sufficient supply for the trip, a small buffer and a written medication list using generic names.</div>
 <div class="item"><b>Know the escalation path.</b><br/>For urgent symptoms, use local emergency services; for non-emergency care, contact the insurer’s assistance line and the hotel front desk.</div>
 </section>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.3</div></div></body></html>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.3</div></div><a aria-label="Return to top" class="back-to-top" href="#top" title="Return to top">↑</a></body></html>

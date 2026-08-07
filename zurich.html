@@ -65,8 +65,36 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .city-day-nav .jump-nav a.active-day{background:var(--ink);color:#fff;border-color:var(--ink)}
 .weather-flex-note{font-size:.78rem;color:var(--muted);margin-top:5px}
 @media(max-width:760px){.day-glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Version 5.7 navigation fix + persistent top button */
+.back-to-top{
+  position:fixed;
+  right:16px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid var(--line,#d8d2c8);
+  background:rgba(255,255,255,.94);
+  color:var(--ink,#24343a);
+  box-shadow:0 4px 16px rgba(0,0,0,.14);
+  text-decoration:none;
+  font-size:1.05rem;
+  font-weight:800;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.back-to-top:hover{transform:translateY(-1px)}
+.back-to-top:focus{outline:3px solid rgba(176,138,88,.35);outline-offset:2px}
+@media(max-width:560px){
+  .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
+}
 </style></head>
-<body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Zurich Airport</h1><div class="sub">September 21–22 · Hyatt Regency The Circle</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a class="active" href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
+<body><div aria-hidden="true" id="top"></div><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Zurich Airport</h1><div class="sub">September 21–22 · Hyatt Regency The Circle</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a class="active" href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">FINAL NIGHT</div><h2>Ease over one more city</h2><p>The Circle keeps the final evening calm and puts you steps from the airport.</p></div>
 <svg class="lake-art" viewbox="0 0 680 160"><path d="M0 150V88l120-35 80 30 95-52 80 45 90-26 105 45 110-32v87z" fill="#cbd6d9"></path><rect fill="#70828c" height="70" width="35" x="80" y="80"></rect><rect fill="#84969d" height="56" width="55" x="145" y="94"></rect><rect fill="#687c86" height="76" width="45" x="248" y="74"></rect><rect fill="#8ca0a6" height="48" width="60" x="340" y="102"></rect><rect fill="#6f858e" height="66" width="48" x="455" y="84"></rect></svg></section>
 <div class="card"><h3>📍 The Circle Essentials</h3>
@@ -112,19 +140,34 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <b>Fly home.</b><div class="tiny">No next itinerary day.</div>
 </div><div class="section-nav"><a href="#arrival">← Previous</a><a class="top-link" href="#city-day-top">Day menu</a><a href="daily.html">Daily Guide →</a></div></section>
 </main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><script>
-    // v5.6: keep the sticky day menu synchronized with the section in view.
-    (function(){
-      const links=[...document.querySelectorAll('.city-day-nav a[href^="#"]')];
-      const pairs=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
-      if(!pairs.length || !('IntersectionObserver' in window)) return;
-      const obs=new IntersectionObserver(entries=>{
-        const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
-        if(!visible.length) return;
-        const id='#'+visible[0].target.id;
-        links.forEach(a=>a.classList.toggle('active-day',a.getAttribute('href')===id));
-        const active=links.find(a=>a.getAttribute('href')===id);
-        if(active) active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-      },{rootMargin:'-25% 0px -60% 0px',threshold:[0,.15,.35]});
-      pairs.forEach(x=>obs.observe(x.el));
-    })();
-    </script></body></html>
+// v5.7: highlight the current itinerary section without moving the page.
+(function(){
+  const nav=document.querySelector('.city-day-nav');
+  if(!nav) return;
+  const links=[...nav.querySelectorAll('a[href^="#"]')];
+  const pairs=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+  if(!pairs.length || !('IntersectionObserver' in window)) return;
+
+  let current=null;
+  const obs=new IntersectionObserver(entries=>{
+    const visible=entries
+      .filter(e=>e.isIntersecting)
+      .sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+    if(!visible.length) return;
+    const id='#'+visible[0].target.id;
+    if(id===current) return;
+    current=id;
+    links.forEach(a=>a.classList.toggle('active-day',a.getAttribute('href')===id));
+
+    // Keep the active chip visible horizontally only. Never alter vertical scroll.
+    const active=links.find(a=>a.getAttribute('href')===id);
+    const scroller=nav.querySelector('.jump-nav') || nav;
+    if(active && scroller.scrollWidth>scroller.clientWidth){
+      const target=active.offsetLeft-(scroller.clientWidth-active.offsetWidth)/2;
+      scroller.scrollTo({left:Math.max(0,target),behavior:'smooth'});
+    }
+  },{rootMargin:'-22% 0px -62% 0px',threshold:[0,.12,.3]});
+
+  pairs.forEach(x=>obs.observe(x.el));
+})();
+</script><a aria-label="Return to top" class="back-to-top" href="#top" title="Return to top">↑</a></body></html>

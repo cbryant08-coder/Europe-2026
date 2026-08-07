@@ -46,11 +46,39 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .timeline{display:grid;gap:8px}.timeline .slot{border-left:4px solid var(--al,#87967d);background:#f3eee6;border-radius:0 12px 12px 0;padding:10px 12px}.timeline .slot b{display:block;font-size:.72rem;text-transform:uppercase;color:var(--muted)}
 .res-row{display:grid;grid-template-columns:1.15fr .75fr;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}.res-row:last-child{border-bottom:0}.res-row h4{margin:0 0 4px}.res-meta{text-align:right;font-size:.82rem}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.dashboard-grid .fact{min-height:78px}
 @media(max-width:520px){.res-row{grid-template-columns:1fr}.res-meta{text-align:left}.dashboard-grid{grid-template-columns:1fr 1fr}}
+
+/* Version 5.7 navigation fix + persistent top button */
+.back-to-top{
+  position:fixed;
+  right:16px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid var(--line,#d8d2c8);
+  background:rgba(255,255,255,.94);
+  color:var(--ink,#24343a);
+  box-shadow:0 4px 16px rgba(0,0,0,.14);
+  text-decoration:none;
+  font-size:1.05rem;
+  font-weight:800;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.back-to-top:hover{transform:translateY(-1px)}
+.back-to-top:focus{outline:3px solid rgba(176,138,88,.35);outline-offset:2px}
+@media(max-width:560px){
+  .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
+}
 </style></head>
-<body><div class="app"><header><div class="eyebrow">EUROPE 2026 · VERSION 5.0</div><h1>The Long Exhale</h1><div class="sub">21 days through France, the Black Forest and Switzerland · September 2–22</div></header><nav class="site-nav"><a class="active" href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
+<body><div aria-hidden="true" id="top"></div><div class="app"><header><div class="eyebrow">EUROPE 2026 · VERSION 5.0</div><h1>The Long Exhale</h1><div class="sub">21 days through France, the Black Forest and Switzerland · September 2–22</div></header><nav class="site-nav"><a class="active" href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">OUR RETIREMENT JOURNEY</div><h2>Travel slowly. Leave room for discovery.</h2><p>A mobile field guide built around neighborhoods, mountain awe, casual vegan food and confident logistics.</p></div><svg class="lake-art" viewbox="0 0 680 160"><path d="M0 145L90 86l60 35 90-100 82 90 64-60 90 81 62-39 142 57v10H0z" fill="#dce6df"></path><path d="M0 137q140-18 280 2t400-2v23H0z" fill="#8daab0"></path></svg></section><div class="card"><div class="eyebrow">TRIP DASHBOARD</div><h3>21 days · 5 bases · 1 unhurried journey</h3><div class="dashboard-grid"><div class="fact"><b>Start</b>Paris · Sept 2</div><div class="fact"><b>Finish</b>Zürich · Sept 22</div><div class="fact"><b>Rail strategy</b>Half Fare + First Class</div><div class="fact"><b>Mountain rule</b>Weather decides</div></div><a class="btn" href="daily.html">Open Daily Guide</a><a class="btn" href="reservations.html">Open Reservations</a><a class="btn" href="rules.html">Open Travel Rules</a></div>
 <div class="card"><h3>How we want to travel</h3><div class="checklist"><div>Survey first, then return to places we love.</div><div>Weather beats the itinerary in the mountains.</div><div>Lunch is the main meal; evenings belong to the hotel, snacks and reflection.</div><div>Warmth and authenticity beat prestige.</div><div>A wonderful hour is never wasted.</div></div></div>
 <div class="card"><h3>Open a destination</h3>
 <a class="btn" href="paris.html">🇫🇷 Paris</a><a class="btn" href="strasbourg.html">🇫🇷 Strasbourg &amp; Alsace</a><a class="btn" href="wengen.html">🇨🇭 Wengen Base Camp</a><a class="btn" href="montreux.html">🇨🇭 Montreux</a><a class="btn" href="zurich.html">🇨🇭 Zurich Airport</a><a class="btn" href="transfers.html">🚆 Transfers</a><a class="btn" href="daily.html">📅 Daily Guide</a><a class="btn" href="reservations.html">🎟️ Reservations</a></div>
 <div class="card highlight"><h3>What is new in Version 5.0</h3><p>A chronological 21-day guide, reservations dashboard, expanded navigation, trip-progress orientation and a clearer Travel Hub.</p></div>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><a aria-label="Return to top" class="back-to-top" href="#top" title="Return to top">↑</a></body></html>

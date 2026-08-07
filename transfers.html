@@ -46,8 +46,36 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 .timeline{display:grid;gap:8px}.timeline .slot{border-left:4px solid var(--al,#87967d);background:#f3eee6;border-radius:0 12px 12px 0;padding:10px 12px}.timeline .slot b{display:block;font-size:.72rem;text-transform:uppercase;color:var(--muted)}
 .res-row{display:grid;grid-template-columns:1.15fr .75fr;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}.res-row:last-child{border-bottom:0}.res-row h4{margin:0 0 4px}.res-meta{text-align:right;font-size:.82rem}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.dashboard-grid .fact{min-height:78px}
 @media(max-width:520px){.res-row{grid-template-columns:1fr}.res-meta{text-align:left}.dashboard-grid{grid-template-columns:1fr 1fr}}
+
+/* Version 5.7 navigation fix + persistent top button */
+.back-to-top{
+  position:fixed;
+  right:16px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid var(--line,#d8d2c8);
+  background:rgba(255,255,255,.94);
+  color:var(--ink,#24343a);
+  box-shadow:0 4px 16px rgba(0,0,0,.14);
+  text-decoration:none;
+  font-size:1.05rem;
+  font-weight:800;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.back-to-top:hover{transform:translateY(-1px)}
+.back-to-top:focus{outline:3px solid rgba(176,138,88,.35);outline-offset:2px}
+@media(max-width:560px){
+  .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
+}
 </style></head>
-<body><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Transfers &amp; Tickets</h1><div class="sub">Prescriptive routes · First class where practical · Comfort over speed</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a class="active" href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
+<body><div aria-hidden="true" id="top"></div><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Transfers &amp; Tickets</h1><div class="sub">Prescriptive routes · First class where practical · Comfort over speed</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a class="active" href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">TRAVEL PLAYBOOK</div><h2>Know exactly what to buy</h2><p>Each transfer identifies the route, purchase source, class, connection target and arrival plan.</p></div>
 <svg class="lake-art" viewbox="0 0 680 160"><path d="M0 125L110 77l70 40 95-95 94 91 72-55 90 68 76-34 73 34v34H0z" fill="#dce5df"></path><path d="M20 138h135q35 0 55-25l38-42q20-25 55 0l54 42q20 18 48 18h245" fill="none" stroke="#fff" stroke-width="7"></path><circle cx="90" cy="138" fill="#b08a58" r="9"></circle><circle cx="330" cy="94" fill="#b08a58" r="9"></circle><circle cx="580" cy="132" fill="#b08a58" r="9"></circle></svg></section>
 <div class="card decision"><h3>Our booking strategy</h3>
@@ -120,4 +148,4 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 <div class="card dayhead"><div class="muted">Tuesday, September 22</div><h2>Hyatt Regency → Flight</h2><p>Indoor airport transfer for the 1:10 PM flight.</p><div class="quick-grid"><div class="fact"><b>Leave room</b>9:30–10:00 AM</div><div class="fact"><b>Airport target</b>About 3 hours early</div><div class="fact"><b>Transport</b>Walk</div><div class="fact"><b>Tickets</b>Airline app</div></div></div>
 <details open=""><summary>✈️ Final steps</summary><div class="inside"><div class="item">Confirm terminal/check-in the night before. Follow signs from The Circle to the airport. Use the front desk for the fastest indoor route.</div></div></details>
 </section>
-</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div></body></html>
+</main><div class="page-footer">The Long Exhale · Europe 2026 · Version 5.0</div></div><a aria-label="Return to top" class="back-to-top" href="#top" title="Return to top">↑</a></body></html>
