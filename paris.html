@@ -145,6 +145,68 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 @media(max-width:560px){
   .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
 }
+
+/* Version 5.8 desktop navigation refinement */
+.site-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.site-nav::-webkit-scrollbar{display:none}
+
+.jump-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none}
+
+.city-day-nav{
+  overflow:visible !important;
+}
+.city-day-nav .jump-nav{
+  overflow-x:visible !important;
+}
+
+@media (min-width: 761px){
+  .site-nav{
+    white-space:normal !important;
+    gap:10px !important;
+  }
+  .site-nav a{
+    flex:0 0 auto !important;
+  }
+  .jump-nav{
+    white-space:normal !important;
+    gap:8px !important;
+  }
+  .jump-nav a{
+    flex:0 0 auto !important;
+  }
+}
+
+@media (max-width: 760px){
+  .site-nav,
+  .jump-nav{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .site-nav::-webkit-scrollbar,
+  .jump-nav::-webkit-scrollbar{
+    display:none;
+  }
+}
+
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:120;
+  background:rgba(250,248,243,.97);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
 </style></head><body><div aria-hidden="true" id="top"></div><div class="app"><section class="hero-visual"><img alt="Decorative travel illustration" src="assets/paris.svg"/><div class="hero-overlay"><div class="eyebrow">THE LONG EXHALE · MOBILE GUIDE V4.1</div><h1>Paris</h1><p>September 2–7 · Hôtel Adèle &amp; Jules</p></div></section><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a class="active" href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main><section class="city" id="paris"><div class="citytitle paris"><h2>Paris</h2><div>Sept 2–7 · Hôtel Adèle &amp; Jules</div></div><div class="card visual-card"><img alt="Illustrated Paris skyline" src="assets/paris.svg"/><div class="visual-copy"><h3>Paris approach</h3><p>Iconic places are experienced, not avoided—but each day also gives you a different return corridor, restroom anchors and room to meander.</p></div></div>
 <div class="card"><h3>Paris at a glance</h3>
 <span class="badge">Walk first</span><span class="badge">Late lunch</span><span class="badge">1–2 evening outings</span><span class="badge">Rain-friendly</span>

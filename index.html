@@ -74,6 +74,68 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 @media(max-width:560px){
   .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
 }
+
+/* Version 5.8 desktop navigation refinement */
+.site-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.site-nav::-webkit-scrollbar{display:none}
+
+.jump-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none}
+
+.city-day-nav{
+  overflow:visible !important;
+}
+.city-day-nav .jump-nav{
+  overflow-x:visible !important;
+}
+
+@media (min-width: 761px){
+  .site-nav{
+    white-space:normal !important;
+    gap:10px !important;
+  }
+  .site-nav a{
+    flex:0 0 auto !important;
+  }
+  .jump-nav{
+    white-space:normal !important;
+    gap:8px !important;
+  }
+  .jump-nav a{
+    flex:0 0 auto !important;
+  }
+}
+
+@media (max-width: 760px){
+  .site-nav,
+  .jump-nav{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .site-nav::-webkit-scrollbar,
+  .jump-nav::-webkit-scrollbar{
+    display:none;
+  }
+}
+
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:120;
+  background:rgba(250,248,243,.97);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
 </style></head>
 <body><div aria-hidden="true" id="top"></div><div class="app"><header><div class="eyebrow">EUROPE 2026 · VERSION 5.0</div><h1>The Long Exhale</h1><div class="sub">21 days through France, the Black Forest and Switzerland · September 2–22</div></header><nav class="site-nav"><a class="active" href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">OUR RETIREMENT JOURNEY</div><h2>Travel slowly. Leave room for discovery.</h2><p>A mobile field guide built around neighborhoods, mountain awe, casual vegan food and confident logistics.</p></div><svg class="lake-art" viewbox="0 0 680 160"><path d="M0 145L90 86l60 35 90-100 82 90 64-60 90 81 62-39 142 57v10H0z" fill="#dce6df"></path><path d="M0 137q140-18 280 2t400-2v23H0z" fill="#8daab0"></path></svg></section><div class="card"><div class="eyebrow">TRIP DASHBOARD</div><h3>21 days · 5 bases · 1 unhurried journey</h3><div class="dashboard-grid"><div class="fact"><b>Start</b>Paris · Sept 2</div><div class="fact"><b>Finish</b>Zürich · Sept 22</div><div class="fact"><b>Rail strategy</b>Half Fare + First Class</div><div class="fact"><b>Mountain rule</b>Weather decides</div></div><a class="btn" href="daily.html">Open Daily Guide</a><a class="btn" href="reservations.html">Open Reservations</a><a class="btn" href="rules.html">Open Travel Rules</a></div>

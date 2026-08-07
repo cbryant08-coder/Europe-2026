@@ -93,6 +93,68 @@ a,span,p,li,h1,h2,h3,h4{overflow-wrap:anywhere}
 @media(max-width:560px){
   .back-to-top{right:12px;bottom:14px;width:44px;height:44px}
 }
+
+/* Version 5.8 desktop navigation refinement */
+.site-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.site-nav::-webkit-scrollbar{display:none}
+
+.jump-nav{
+  flex-wrap:wrap !important;
+  overflow-x:visible !important;
+  scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none}
+
+.city-day-nav{
+  overflow:visible !important;
+}
+.city-day-nav .jump-nav{
+  overflow-x:visible !important;
+}
+
+@media (min-width: 761px){
+  .site-nav{
+    white-space:normal !important;
+    gap:10px !important;
+  }
+  .site-nav a{
+    flex:0 0 auto !important;
+  }
+  .jump-nav{
+    white-space:normal !important;
+    gap:8px !important;
+  }
+  .jump-nav a{
+    flex:0 0 auto !important;
+  }
+}
+
+@media (max-width: 760px){
+  .site-nav,
+  .jump-nav{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .site-nav::-webkit-scrollbar,
+  .jump-nav::-webkit-scrollbar{
+    display:none;
+  }
+}
+
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:120;
+  background:rgba(250,248,243,.97);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
 </style></head>
 <body><div aria-hidden="true" id="top"></div><div class="app"><header><div class="eyebrow">THE LONG EXHALE · V4.1 FINAL</div><h1>Montreux</h1><div class="sub">September 19–21 · Grand Hotel Suisse Majestic</div></header><nav class="site-nav"><a href="index.html">Home</a><a href="daily.html">Daily Guide</a><a href="paris.html">Paris</a><a href="strasbourg.html">Strasbourg</a><a href="wengen.html">Wengen</a><a class="active" href="montreux.html">Montreux</a><a href="zurich.html">Zurich</a><a href="transfers.html">Travel Hub</a><a href="rules.html">Travel Rules</a><a href="reservations.html">Reservations</a></nav><main>
 <section class="hero"><div class="hero-copy"><div class="eyebrow" style="color:#eef4ef">LAKE GENEVA SHORE</div><h2>Two nights to exhale</h2><p>Montreux is intentionally simpler: promenade, Chillon, good food, and time to absorb the trip.</p></div>
